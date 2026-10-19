@@ -1,0 +1,44 @@
+{
+  "nc80": {
+    "nc": 80,
+    "total_params": 9458752,
+    "trunk_params": 8608384,
+    "head_params": 850368,
+    "head_trainable_params": 850352,
+    "head_fraction": 0.08990276941397765,
+    "head_channels_in": [
+      128,
+      256,
+      512
+    ],
+    "head_gmacs_640": 1.5995392,
+    "trunk_gmacs_640": 9.1333632,
+    "head_update_bytes_fp16": 1700704,
+    "head_update_bytes_fp32": 3401408,
+    "full_model_bytes_fp32": 37835008,
+    "bn_channels_total": 14992,
+    "conv_layers_total": 87,
+    "calib_stats_bytes": 209024
+  },
+  "nc152": {
+    "nc": 152,
+    "total_params": 9486616,
+    "trunk_params": 8608384,
+    "head_params": 878232,
+    "head_trainable_params": 878216,
+    "head_fraction": 0.09257589850796111,
+    "head_channels_in": [
+      128,
+      256,
+      512
+    ],
+    "head_gmacs_640": 1.6769536,
+    "trunk_gmacs_640": 9.1333632,
+    "head_update_bytes_fp16": 1756432,
+    "head_update_bytes_fp32": 3512864,
+    "full_model_bytes_fp32": 37946464,
+    "bn_channels_total": 14992,
+    "conv_layers_total": 87,
+    "calib_stats_bytes": 209024
+  }
+}

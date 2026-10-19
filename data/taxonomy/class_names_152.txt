@@ -1,0 +1,152 @@
+person
+child
+cyclist
+motorcyclist
+wheelchair
+stroller
+dog
+cat
+bird
+horse
+cow
+sheep
+goat
+camel
+car
+bus
+truck
+van
+taxi
+ambulance
+motorcycle
+bicycle
+e-scooter
+skateboard
+train
+golf cart
+shopping cart
+trailer
+traffic light
+pedestrian signal
+crosswalk button
+stop sign
+traffic sign
+crosswalk
+street light
+utility pole
+pole
+yield sign
+do not enter sign
+one way sign
+pedestrian crossing sign
+speed limit sign
+construction sign
+sidewalk closed sign
+bus stop sign
+exit sign
+wet floor sign
+fire hydrant
+parking meter
+bench
+trash can
+bike rack
+mailbox
+utility box
+billboard
+fountain
+potted plant
+barrel
+traffic cone
+bollard
+sidewalk sign
+kiosk
+barrier
+fence
+ladder
+tent
+sculpture
+pillar
+curb
+curb ramp
+stairs
+escalator
+ramp
+pothole
+manhole
+storm drain
+sidewalk crack
+speed bump
+rail track
+tactile paving
+open hole
+swimming pool
+door
+door handle
+window
+building
+elevator
+atm
+tree
+palm tree
+plant
+backpack
+handbag
+suitcase
+umbrella
+bottle
+cup
+box
+plastic bag
+tire
+ball
+cell phone
+glasses
+book
+can
+toy
+chair
+couch
+bed
+table
+desk
+coffee table
+nightstand
+chest of drawers
+wardrobe
+toilet
+sink
+tv
+laptop
+refrigerator
+microwave
+oven
+stove
+washing machine
+bathtub
+shower
+shelf
+bookcase
+stool
+mirror
+curtain
+cabinet
+countertop
+lamp
+ceiling fan
+pillow
+clock
+keyboard
+mouse
+remote
+scissors
+knife
+fork
+spoon
+bowl
+plate
+kettle
+toothbrush
+towel
+banana
+apple
+orange

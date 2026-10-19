@@ -1,0 +1,106 @@
+Ultralytics 8.4.155  Python-3.11.9 torch-2.5.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4060 Laptop GPU, 8188MiB)
+YOLO11s summary (fused): 100 layers, 9,471,624 parameters, 0 gradients, 21.7 GFLOPs
+[34m[1mval: [0mFast image access  (ping: 0.30.0 ms, read: 228.8126.7 MB/s, size: 440.7 KB)
+[K[34m[1mval: [0mScanning E:\fedv2x_work\xcheck1000\labels\val.cache... 1000 images, 29 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 1000/1000  0.0s
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__00031197fb7b015d.jpg: 40 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__0004c9478eeda995.jpg: 70 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__006df640ce32c5e2.jpg: 3 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__00d67ab9e6db2059.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__01979849acc27462.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__046b85a27098c135.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__05290fd9390c48c7.jpg: 40 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__0a3a46cd533b5eca.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__15840567a5bd0f15.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__29c9e76e2b750647.jpg: 9 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__315ac0c69a73e081.jpg: 3 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__324caa5047641ba8.jpg: 6 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__32eec1d207443879.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__416fbe9351bc8711.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__440028928718acff.jpg: 3 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__4c0d13bb9ac2e4fb.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__503cb0df4480ca24.jpg: 5 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__50bfeaf8464330b1.jpg: 6 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__52c66f0986481d18.jpg: 12 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__5a0ca368ccb5d2e6.jpg: 30 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__5ab650eb0e50f349.jpg: 2 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__5acd764677785628.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__5ce090589424be46.jpg: 8 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__60f18919c0a74196.jpg: 3 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__6b61b98205d5d070.jpg: 8 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__7704f6da4e25910c.jpg: 11 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__7db48f9a6993af86.jpg: 26 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__8de325568e7c10b0.jpg: 22 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__92269e70e555a2e9.jpg: 9 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__a0305ebefed592b2.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__a980ce9eb2f9b8dc.jpg: 3 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__ab8acf85d3d3d60c.jpg: 2 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__acba7e03d8c3c36f.jpg: 12 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__b2924fb1c333964f.jpg: 3 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__bad3fff8e9589902.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__ca12def8ea8894ae.jpg: 10 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__cf2557825e687836.jpg: 3 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__cf3df7cd50a3a163.jpg: 10 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__d1b3425117010604.jpg: 2 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__d43f9e731bae701a.jpg: 8 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__d54cf00279789db7.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__dbf426e1543cc41e.jpg: 63 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__dc29a2825e3c90d8.jpg: 3 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__de94f227f5c54176.jpg: 7 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__dee7a44da86491ec.jpg: 16 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__e0c9a123e2690946.jpg: 15 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__e30ce240321fc31e.jpg: 10 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__eb673496c3be27d6.jpg: 5 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__eeb4adce35605d2a.jpg: 7 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__f0508277b718aa55.jpg: 16 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__f709c3fce083c2cb.jpg: 3 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__fa41bc94efed37b6.jpg: 6 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__fa4879b0f94ddc54.jpg: 2 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__train__fbcfc70efb8f82ba.jpg: 78 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__val__214a4b9be6fdd6c2.jpg: 3 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__val__65a40656a6ba5344.jpg: 2 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__val__811f622fd296864f.jpg: 5 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__val__c2f6127bcbdd6142.jpg: 11 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__val__e1ffa13fb120c12b.jpg: 2 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\xcheck1000\images\val\oiv7__val__eab5e7e2423dfed3.jpg: 12 duplicate labels removed
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 1% ──────────── 1/63 4.5s/it 1.4s<4:40[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 3% ──────────── 2/63 1.2s/it 1.8s<1:13[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 4% ╸─────────── 3/63 1.2it/s 2.3s<49.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 6% ╸─────────── 4/63 1.2it/s 3.1s<48.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 7% ╸─────────── 5/63 1.5it/s 3.6s<39.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 9% ━─────────── 6/63 1.4it/s 4.3s<40.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 11% ━─────────── 7/63 1.7it/s 4.8s<33.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 12% ━╸────────── 8/63 1.8it/s 5.2s<30.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 14% ━╸────────── 9/63 1.8it/s 5.8s<29.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 15% ━╸────────── 10/63 1.9it/s 6.2s<27.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 17% ━━────────── 11/63 2.0it/s 6.7s<26.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 19% ━━────────── 12/63 2.1it/s 7.1s<24.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 20% ━━────────── 13/63 1.9it/s 7.9s<26.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 22% ━━╸───────── 14/63 1.9it/s 8.3s<25.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 23% ━━╸───────── 15/63 1.9it/s 8.8s<24.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 25% ━━━───────── 16/63 2.0it/s 9.3s<23.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 26% ━━━───────── 17/63 2.0it/s 9.8s<22.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 28% ━━━───────── 18/63 2.0it/s 10.3s<22.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 19/63 1.8it/s 11.0s<24.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 31% ━━━╸──────── 20/63 1.6it/s 11.9s<26.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 21/63 1.6it/s 12.5s<26.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 34% ━━━━──────── 22/63 1.6it/s 13.1s<25.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 36% ━━━━──────── 23/63 1.8it/s 13.6s<22.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 38% ━━━━╸─────── 24/63 1.9it/s 14.1s<20.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 39% ━━━━╸─────── 25/63 1.9it/s 14.6s<20.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 41% ━━━━╸─────── 26/63 1.9it/s 15.1s<19.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 42% ━━━━━─────── 27/63 1.7it/s 15.9s<20.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 44% ━━━━━─────── 28/63 1.9it/s 16.3s<18.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 46% ━━━━━╸────── 29/63 1.9it/s 16.9s<18.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 47% ━━━━━╸────── 30/63 2.0it/s 17.3s<16.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 49% ━━━━━╸────── 31/63 2.0it/s 17.9s<16.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 32/63 2.0it/s 18.3s<15.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 52% ━━━━━━────── 33/63 2.0it/s 18.8s<14.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 53% ━━━━━━────── 34/63 2.0it/s 19.3s<14.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 55% ━━━━━━╸───── 35/63 2.0it/s 19.8s<13.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 57% ━━━━━━╸───── 36/63 2.0it/s 20.3s<13.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 58% ━━━━━━━───── 37/63 2.0it/s 20.8s<13.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 60% ━━━━━━━───── 38/63 2.0it/s 21.3s<12.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 61% ━━━━━━━───── 39/63 2.0it/s 21.8s<12.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 63% ━━━━━━━╸──── 40/63 2.0it/s 22.3s<11.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 65% ━━━━━━━╸──── 41/63 2.0it/s 22.9s<11.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 66% ━━━━━━━━──── 42/63 1.8it/s 23.6s<11.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 68% ━━━━━━━━──── 43/63 1.7it/s 24.3s<11.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 69% ━━━━━━━━──── 44/63 1.7it/s 24.9s<11.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 71% ━━━━━━━━╸─── 45/63 1.7it/s 25.4s<10.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 73% ━━━━━━━━╸─── 46/63 1.9it/s 25.9s<9.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 74% ━━━━━━━━╸─── 47/63 1.9it/s 26.4s<8.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 76% ━━━━━━━━━─── 48/63 2.0it/s 26.8s<7.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 77% ━━━━━━━━━─── 49/63 2.1it/s 27.3s<6.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 79% ━━━━━━━━━╸── 50/63 1.9it/s 28.0s<6.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 80% ━━━━━━━━━╸── 51/63 1.9it/s 28.5s<6.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 82% ━━━━━━━━━╸── 52/63 1.9it/s 29.1s<5.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 84% ━━━━━━━━━━── 53/63 1.9it/s 29.6s<5.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 85% ━━━━━━━━━━── 54/63 1.9it/s 30.1s<4.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 87% ━━━━━━━━━━── 55/63 1.7it/s 30.9s<4.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 88% ━━━━━━━━━━╸─ 56/63 1.6it/s 31.6s<4.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 57/63 1.7it/s 32.2s<3.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 92% ━━━━━━━━━━━─ 58/63 1.8it/s 32.7s<2.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 93% ━━━━━━━━━━━─ 59/63 1.8it/s 33.2s<2.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 95% ━━━━━━━━━━━─ 60/63 1.6it/s 34.0s<1.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 96% ━━━━━━━━━━━╸ 61/63 1.6it/s 34.7s<1.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 98% ━━━━━━━━━━━╸ 62/63 1.7it/s 35.2s<0.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 63/63 1.8it/s 35.7s
+                   all       1000       8629      0.617      0.505      0.568      0.418
+Speed: 2.8ms preprocess, 9.0ms inference, 0.0ms loss, 4.7ms postprocess per image
+Saving E:\fedv2x_work\xcheck1000\runs\val\predictions.json...
+
+Evaluating faster-coco-eval mAP...
+Evaluate annotation type *bbox*
+COCOeval_opt.evaluate() finished...
+DONE (t=2.85s).
+Accumulating evaluation results...
+COCOeval_opt.accumulate() finished...
+DONE (t=0.00s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.421
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.570
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.459
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.156
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.271
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.517
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.385
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.643
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.287
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.494
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.731
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.853
+ Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.706
+Results saved to [1mE:\fedv2x_work\xcheck1000\runs\val[0m
+{
+ "subset_seed": 20261016,
+ "n_images": 1000,
+ "model": "<reference_detector.pt>",
+ "ultralytics_map50": 0.5682981814745796,
+ "n_predictions": 159296,
+ "ours_map50_iou": 0.5682290715735551,
+ "classes_iou": 144,
+ "max_abs_class_diff_iou": 0.010000000000000009,
+ "ours_map50_score": 0.5683682217198803,
+ "classes_score": 144,
+ "max_abs_class_diff_score": 0.010000000000000009,
+ "abs_diff_iou_rule": 6.910990102448888e-05,
+ "pass": true
+}

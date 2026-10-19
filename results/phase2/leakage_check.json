@@ -1,0 +1,11 @@
+{
+ "images_in_two_cells": 0,
+ "unassigned_images": 0,
+ "groups_in_two_cells": 0,
+ "group_examples": {},
+ "near_duplicate_pairs_within_4_bits_checked": 399046,
+ "near_duplicate_pairs_across_cells": 0,
+ "cross_examples": [],
+ "client_images_from_wrong_source": 0,
+ "pass": true
+}

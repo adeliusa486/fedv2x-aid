@@ -1,0 +1,137 @@
+{
+ "frames": 8999,
+ "frames_with_signal": 5468,
+ "v2x": {
+  "vehicles": 50516,
+  "connected": 25261,
+  "with_proposal": 19149,
+  "correct": 4463,
+  "wrong": 1583,
+  "wrong_wanted": 1594,
+  "precision_emulated": 0.7381739993384056
+ },
+ "range": {
+  "events": 4795,
+  "invalid": 0,
+  "misses": 4435,
+  "promoted": 2944,
+  "promoted_precision": 0.13858695652173914,
+  "dropoff_instances_touched_by_a_region": {
+   "curb": [
+    4386,
+    19744
+   ],
+   "stairs": [
+    84,
+    124
+   ],
+   "pothole": [
+    357,
+    3528
+   ],
+   "open hole": [
+    214,
+    500
+   ]
+  },
+  "promoted_per_class_on_attesting_aids": {
+   "car": [
+    253,
+    886,
+    0.28555304740406323
+   ],
+   "curb": [
+    3,
+    363,
+    0.008264462809917356
+   ],
+   "person": [
+    45,
+    177,
+    0.2542372881355932
+   ],
+   "street light": [
+    30,
+    172,
+    0.1744186046511628
+   ],
+   "pole": [
+    4,
+    169,
+    0.023668639053254437
+   ],
+   "fence": [
+    5,
+    108,
+    0.046296296296296294
+   ],
+   "pothole": [
+    0,
+    27,
+    0.0
+   ],
+   "bicycle": [
+    6,
+    21,
+    0.2857142857142857
+   ],
+   "trash can": [
+    1,
+    14,
+    0.07142857142857142
+   ],
+   "utility box": [
+    0,
+    13,
+    0.0
+   ],
+   "barrier": [
+    1,
+    6,
+    0.16666666666666666
+   ],
+   "bench": [
+    0,
+    4,
+    0.0
+   ],
+   "parking meter": [
+    0,
+    3,
+    0.0
+   ],
+   "utility pole": [
+    0,
+    2,
+    0.0
+   ],
+   "fire hydrant": [
+    1,
+    1,
+    1.0
+   ],
+   "cyclist": [
+    0,
+    1,
+    0.0
+   ],
+   "traffic cone": [
+    0,
+    1,
+    0.0
+   ]
+  }
+ },
+ "params": {
+  "seed": 0,
+  "tag": "E7_pm",
+  "round0": "E:/fedv2x_work/round0/round0_head.pt",
+  "model_tag": "round0",
+  "penetration": 0.5,
+  "r_cond": 0.235,
+  "precision": 0.733,
+  "p_valid": 1.0,
+  "no_range": false,
+  "workers": 8
+ }
+}

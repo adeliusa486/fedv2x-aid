@@ -1,0 +1,310 @@
+where,item,evidence_type,check,detail,source
+tab:det,Default,computed,PASS,5 values,"results/published/mc_det.json, mc_height.json"
+tab:det,Recall x0.9,computed,PASS,6 values,"results/published/mc_det.json, mc_height.json"
+tab:det,Recall x0.8,computed,PASS,6 values,"results/published/mc_det.json, mc_height.json"
+tab:det,0.5 false,computed,PASS,6 values,"results/published/mc_det.json, mc_height.json"
+tab:det,2.5 false,computed,PASS,6 values,"results/published/mc_det.json, mc_height.json"
+tab:det,4.0 false,computed,PASS,6 values,"results/published/mc_det.json, mc_height.json"
+tab:det,Box noise 2%,computed,PASS,6 values,"results/published/mc_det.json, mc_height.json"
+tab:det,Box noise 8%,computed,PASS,6 values,"results/published/mc_det.json, mc_height.json"
+tab:det,Class confusion 5%,computed,PASS,6 values,"results/published/mc_det.json, mc_height.json"
+tab:det,Class confusion 25%,computed,PASS,6 values,"results/published/mc_det.json, mc_height.json"
+tab:det,Camera at 1.3,computed,PASS,5 values,"results/published/mc_det.json, mc_height.json"
+tab:temporal,i.i.d. 3 m,computed,PASS,9 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,i.i.d. 5 m,computed,PASS,9 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,i.i.d. 10 m,computed,PASS,9 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,GM 3 m,computed,PASS,9 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,GM 5 m,computed,PASS,9 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,GM 10 m,computed,PASS,9 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,GM + bias 3 m,computed,PASS,9 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,GM + bias 5 m,computed,PASS,9 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,GM + bias 10 m,computed,PASS,9 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,"GM 5 m, rho=0.1",computed,PASS,10 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,"GM 5 m, rho=0.25",computed,PASS,10 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,"GM 5 m, rho=1.0",computed,PASS,10 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,"Position RMSE, GM 5 m",computed,PASS,4 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:temporal,"raw GNSS, same frames",computed,PASS,2 values,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+tab:misspec,As assumed,computed,PASS,9 values,results/published/mc_temporal_misspec.json
+tab:misspec,3x faster,computed,PASS,9 values,results/published/mc_temporal_misspec.json
+tab:misspec,4x slower,computed,PASS,9 values,results/published/mc_temporal_misspec.json
+tab:misspec,"Under-reported, 8",computed,PASS,7 values,results/published/mc_temporal_misspec.json
+tab:misspec,"Over-reported, 3",computed,PASS,7 values,results/published/mc_temporal_misspec.json
+tab:misspec,8 m and 3x faster,computed,PASS,8 values,results/published/mc_temporal_misspec.json
+tab:robust,"No latency, no loss",computed,PASS,4 values,results/published/mc_temporal.json
+tab:robust,"Latency, dead reckoning",computed,PASS,4 values,results/published/mc_temporal.json
+tab:robust,"Latency, raw reports",computed,PASS,4 values,results/published/mc_temporal.json
+tab:robust,"30% loss, dead reckoning",computed,PASS,5 values,results/published/mc_temporal.json
+tab:robust,"30% loss, raw reports",computed,PASS,5 values,results/published/mc_temporal.json
+tab:robust,"Ghosts, 17%",computed,PASS,7 values,results/published/mc_temporal.json
+tab:robust,"Ghosts, 38%",computed,PASS,7 values,results/published/mc_temporal.json
+tab:robust,"Shifted, 10%",computed,PASS,7 values,results/published/mc_temporal.json
+tab:robust,"Shifted, 30%",computed,PASS,7 values,results/published/mc_temporal.json
+tab:mobility,"30 / 6, 150 m",computed,PASS,8 values,results/published/mobility_sumo.json
+tab:mobility,"30 / 6, fixed",computed,PASS,7 values,results/published/mobility_sumo.json
+tab:mobility,"30 / 6, 100 m",computed,PASS,8 values,results/published/mobility_sumo.json
+tab:mobility,"30 / 6, 250 m",computed,PASS,8 values,results/published/mobility_sumo.json
+tab:mobility,"30 / 12, 150 m",computed,PASS,8 values,results/published/mobility_sumo.json
+tab:mobility,"120 / 12, 150 m",computed,PASS,8 values,results/published/mobility_sumo.json
+tab:mobility,"300 / 24, 150 m",computed,PASS,8 values,results/published/mobility_sumo.json
+tab:modes,30 / 6 random 1.0,computed,PASS,9 values,results/published/mobility_modes.json
+tab:modes,30 / 6 continuous 1.0,computed,PASS,9 values,results/published/mobility_modes.json
+tab:modes,30 / 6 habitual 1.0,computed,PASS,9 values,results/published/mobility_modes.json
+tab:modes,30 / 6 habitual 0.25,computed,PASS,9 values,results/published/mobility_modes.json
+tab:modes,120 / 12 habitual 1.0,computed,PASS,9 values,results/published/mobility_modes.json
+tab:modes,120 / 12 habitual 0.25,computed,PASS,9 values,results/published/mobility_modes.json
+tab:modes,300 / 24 habitual 1.0,computed,PASS,9 values,results/published/mobility_modes.json
+tab:modes,300 / 24 habitual 0.25,computed,PASS,9 values,results/published/mobility_modes.json
+tab:gatedrift,vs. omega_rel,computed,PASS,6 values,results/published/gate_drift.json
+tab:gatedrift,+ fallback,computed,PASS,6 values,results/published/gate_drift.json
+tab:gatedrift,+ anchor,computed,PASS,6 values,results/published/gate_drift.json
+tab:gatedrift,+ fallback + anchor,computed,PASS,6 values,results/published/gate_drift.json
+fig:grid,(a) C 2 deg,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(a) PM 2 deg,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(a) C 5 deg,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(a) PM 5 deg,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(a) C 10 deg,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(a) PM 10 deg,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(b) C 2 deg,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(b) PM 2 deg,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(b) C 5 deg,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(b) PM 5 deg,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(b) C 10 deg,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(b) PM 10 deg,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(c) C rho 0.1,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(c) C rho 0.25,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(c) C rho 0.5,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(c) C rho 0.75,computed,PASS,5 points,results/published/mc_grid.json
+fig:grid,(c) C rho 1.0,computed,PASS,5 points,results/published/mc_grid.json
+fig:gate,+1 pt churn 2%,computed,PASS,4 points,results/published/gate_oc.json
+fig:gate,+1 pt churn 5%,computed,PASS,4 points,results/published/gate_oc.json
+fig:gate,+1 pt churn 5% indep,computed,PASS,4 points,results/published/gate_oc.json
+fig:gate,+1 pt churn 10%,computed,PASS,4 points,results/published/gate_oc.json
+fig:gate,no change churn 5%,computed,PASS,4 points,results/published/gate_oc.json
+fig:gate,one group -2 pt churn 5%,computed,PASS,4 points,results/published/gate_oc.json
+fig:theory,(a) grad norm vs eps,computed,PASS,5 points,"results/published/theory_check.json, theory_check_dp.json"
+fig:theory,(b) d=1005,computed,PASS,3 points,"results/published/theory_check.json, theory_check_dp.json"
+fig:theory,(b) d=105,computed,PASS,3 points,"results/published/theory_check.json, theory_check_dp.json"
+text,C4: update share,computed,PASS,,results/published/yolo11_budget.json
+text,discussion: participation,computed,PASS,,results/published/mobility_modes.json
+text,RQ3: modes participation and deferral,computed,PASS,,"results/published/mobility_sumo.json, mobility_modes.json"
+text,RQ3: modes cross-RSU,computed,PASS,,"results/published/mobility_sumo.json, mobility_modes.json"
+text,budget: 80-class parameters,computed,PASS,,results/published/yolo11_budget.json
+text,model budget,computed,PASS,,results/published/yolo11_budget.json
+text,C2: precision and ratio,computed,PASS,,results/published/v2x_pseudolabel_mc.json
+text,corollary: floor ratio,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, yolo11_budget.json"
+text,corollary: precisions,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, yolo11_budget.json"
+text,corollary: PM,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, yolo11_budget.json"
+text,corollary: head params,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, yolo11_budget.json"
+text,RQ1: P precision,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1: P at 5 m,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1: PM,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1: C,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1: unconnected share,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1: identity precision,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1: hard share,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,grid: more / twice,computed,PASS,,results/published/mc_grid.json
+text,grid: recall exceptions,computed,PASS,,results/published/mc_grid.json
+text,grid: precision settings,computed,PASS,,results/published/mc_grid.json
+text,grid: precision gap,computed,PASS,,results/published/mc_grid.json
+text,grid: compass,computed,PASS,,results/published/mc_grid.json
+text,detector: min ratio,computed,PASS,,"results/published/mc_det.json, mc_height.json"
+text,detector: false proposals,computed,PASS,,"results/published/mc_det.json, mc_height.json"
+text,detector: box noise,computed,PASS,,"results/published/mc_det.json, mc_height.json"
+text,detector: hard share,computed,PASS,,"results/published/mc_det.json, mc_height.json"
+text,detector: camera height,computed,PASS,,"results/published/mc_det.json, mc_height.json"
+text,temporal: iid 10 m,computed,PASS,,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+text,temporal: GM 5 m,computed,PASS,,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+text,temporal: pose frames,computed,PASS,,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+text,temporal: RMSE,computed,PASS,,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+text,temporal: C RMSE,computed,PASS,,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+text,temporal: bias and 10 m,computed,PASS,,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+text,temporal: SM,computed,PASS,,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+text,temporal: low penetration,computed,PASS,,"results/published/mc_temporal.json, mc_temporal_misspec.json"
+text,misspec: fast,computed,PASS,,results/published/mc_temporal_misspec.json
+text,misspec: worst case,computed,PASS,,results/published/mc_temporal_misspec.json
+text,misspec: over-reported,computed,PASS,,results/published/mc_temporal_misspec.json
+text,latency: raw,computed,PASS,,results/published/mc_temporal.json
+text,latency: loss raw,computed,PASS,,results/published/mc_temporal.json
+text,latency: loss DR,computed,PASS,,results/published/mc_temporal.json
+text,RQ2: update size,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: participation,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: cross-RSU,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: reporters,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: WAN,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: all-hop,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: fixed association,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: windows,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: transfer,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: range,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: 120/12,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: 300/24,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: 120/24,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: 30/12,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,RQ2: duty cycle,computed,PASS,,"results/published/yolo11_budget.json, mobility_sumo.json, mobility_modes.json"
+text,DP: frame-level eps,computed,PASS,,"results/published/dp_budget.json, dp_userlevel.json"
+text,DP: PLD,computed,PASS,,"results/published/dp_budget.json, dp_userlevel.json"
+text,DP: user level 30,computed,PASS,,"results/published/dp_budget.json, dp_userlevel.json"
+text,DP: user level 300,computed,PASS,,"results/published/dp_budget.json, dp_userlevel.json"
+text,DP: per direction,computed,PASS,,"results/published/dp_budget.json, dp_userlevel.json"
+text,spoof: ghosts,computed,PASS,,results/published/mc_temporal.json
+text,spoof: shifted,computed,PASS,,results/published/mc_temporal.json
+text,spoof: wrong labels,computed,PASS,,results/published/mc_temporal.json
+text,spoof: CT,computed,PASS,,results/published/mc_temporal.json
+text,gate: regressing 2 pt,computed,PASS,,"results/published/gate_oc.json, gate_drift.json"
+text,gate: regressing 1 pt,computed,PASS,,"results/published/gate_oc.json, gate_drift.json"
+text,gate: release probabilities,computed,PASS,,"results/published/gate_oc.json, gate_drift.json"
+text,gate: independent,computed,PASS,,"results/published/gate_oc.json, gate_drift.json"
+text,gate: fallback 10% churn,computed,PASS,,"results/published/gate_oc.json, gate_drift.json"
+text,gate: fallback multiplicity,computed,PASS,,"results/published/gate_oc.json, gate_drift.json"
+text,gate: drift,computed,PASS,,"results/published/gate_oc.json, gate_drift.json"
+text,gate: anchor,computed,PASS,,"results/published/gate_oc.json, gate_drift.json"
+text,gate: releases,computed,PASS,,"results/published/gate_oc.json, gate_drift.json"
+text,gate: safety-set optimism,computed,PASS,,"results/published/gate_oc.json, gate_drift.json"
+text,theory: doubling,computed,PASS,,"results/published/theory_check.json, theory_check_dp.json"
+text,theory: kappa,computed,PASS,,"results/published/theory_check.json, theory_check_dp.json"
+text,theory: DP d=1005,computed,PASS,,"results/published/theory_check.json, theory_check_dp.json"
+text,theory: DP d=105,computed,PASS,,"results/published/theory_check.json, theory_check_dp.json"
+text,theory: DP ratio,computed,PASS,,"results/published/theory_check.json, theory_check_dp.json"
+text,theory: clipping,computed,PASS,,"results/published/theory_check.json, theory_check_dp.json"
+text,tab:datasets COCO,measured,PASS,,data/taxonomy/dataset_counts.json
+text,tab:datasets Open Images,measured,PASS,,data/taxonomy/dataset_counts.json
+text,tab:datasets Vistas,measured,PASS,,data/taxonomy/dataset_counts.json
+text,tab:datasets MTSD,measured,PASS,,data/taxonomy/dataset_counts.json
+text,tab:datasets Roboflow,measured,PASS,,data/taxonomy/dataset_counts.json
+text,methods: dataset size,measured,PASS,,data/taxonomy/dataset_counts.json
+text,device: RQ4 accuracy,measured,PASS,,authors' device measurements (not public; FEDV2X_DEVICE_MEASUREMENTS)
+text,device: person AP50,measured,PASS,,authors' device measurements (not public; FEDV2X_DEVICE_MEASUREMENTS)
+text,device: car AP50,measured,PASS,,authors' device measurements (not public; FEDV2X_DEVICE_MEASUREMENTS)
+text,device: hazard AP50,measured,PASS,,authors' device measurements (not public; FEDV2X_DEVICE_MEASUREMENTS)
+text,device: binary size,measured,PASS,,authors' device measurements (not public; FEDV2X_DEVICE_MEASUREMENTS)
+text,device: benchmarks,measured,PASS,,authors' device measurements (not public; FEDV2X_DEVICE_MEASUREMENTS)
+text,device: service rate,measured,PASS,,authors' device measurements (not public; FEDV2X_DEVICE_MEASUREMENTS)
+text,device: safety loop and boot,measured,PASS,,authors' device measurements (not public; FEDV2X_DEVICE_MEASUREMENTS)
+text,device: vision outage,measured,PASS,,authors' device measurements (not public; FEDV2X_DEVICE_MEASUREMENTS)
+text,device: Tier 1 FOV,measured,PASS,,authors' device measurements (not public; FEDV2X_DEVICE_MEASUREMENTS)
+text,device: Tier 1 rate,measured,PASS,,authors' device measurements (not public; FEDV2X_DEVICE_MEASUREMENTS)
+text,tab:platform detector,measured,PASS,,authors' device measurements (not public)
+text,tab:platform accuracy,measured,PASS,,authors' device measurements (not public)
+text,tab:platform AP50 1,measured,PASS,,authors' device measurements (not public)
+text,tab:platform AP50 2,measured,PASS,,authors' device measurements (not public)
+text,tab:platform AP50 3,measured,PASS,,authors' device measurements (not public)
+text,tab:platform binary,measured,PASS,,authors' device measurements (not public)
+text,tab:platform benchmark v3,measured,PASS,,authors' device measurements (not public)
+text,tab:platform benchmark v8s,measured,PASS,,authors' device measurements (not public)
+text,tab:platform loop,measured,PASS,,authors' device measurements (not public)
+text,tab:platform FOV,measured,PASS,,authors' device measurements (not public)
+text,tab:platform first reading,measured,PASS,,authors' device measurements (not public)
+text,tab:platform interval,measured,PASS,,authors' device measurements (not public)
+text,tab:platform range noise,measured,PASS,,authors' device measurements (not public)
+text,tab:platform boot,measured,PASS,,authors' device measurements (not public)
+text,federation: aids,computed,PASS,,
+text,federation: splits,computed,PASS,,
+text,federation: dHash,computed,PASS,,
+text,federation: evaluated groups,computed,PASS,,
+text,federation: n_min,computed,PASS,,
+text,federation: round 0,computed,PASS,,
+text,federation: cache size,computed,PASS,,
+text,federation: cache equality,computed,PASS,,
+text,federation: safety set,computed,PASS,,
+text,federation: safety floor,computed,PASS,,
+text,federation: rounds,computed,PASS,,
+text,tab:hyper local work,computed,PASS,,
+text,tab:hyper rounds,computed,PASS,,
+text,datasets: groups,computed,PASS,,
+text,datasets: manifest,computed,PASS,,
+text,reproducibility: metric agreement,computed,PASS,,
+text,abstract: KITTI ratio,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_grid.json, mc_temporal.json, mobility_sumo.json, yolo11_budget.json"
+text,tab:kitti caption sd,computed,PASS,,
+text,tab:kitti object true 5m,computed,PASS,,
+text,tab:kitti object det 0m,computed,PASS,,
+text,tab:kitti object det 5m,computed,PASS,,
+text,tab:kitti object det 10m,computed,PASS,,
+text,tab:kitti object rho .25,computed,PASS,,
+text,tab:kitti seq GM 5,computed,PASS,,
+text,tab:kitti seq GM 10,computed,PASS,,
+text,tab:kitti seq iid,computed,PASS,,
+text,RQ1 KITTI: geometry,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1 KITTI: end to end,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1 KITTI: proposal share,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1 KITTI: failures,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1 KITTI: CT,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1 KITTI: position,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1 KITTI: iid,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1 KITTI: runtime,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,RQ1 98 deg,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_temporal_misspec.json"
+text,discussion: heights,computed,PASS,,results/published/mobility_modes.json
+text,E8 method: bench log,computed,PASS,,
+text,tab:rangelabels caption,computed,PASS,,
+text,tab:rangelabels caption frames,computed,PASS,,
+text,E8: events,computed,PASS,,
+text,E8: coverage,computed,PASS,,
+text,E8: promotion,computed,PASS,,
+text,E8: suppression,computed,PASS,,
+text,E8: distilled/protected,computed,PASS,,
+text,E8: pothole,computed,PASS,,
+text,tab:rangelabels curb,computed,PASS,,
+text,tab:rangelabels stairs,computed,PASS,,
+text,tab:rangelabels pothole,computed,PASS,,
+text,tab:rangelabels open hole,computed,PASS,,
+text,tab:rangelabels vehicle,computed,PASS,,
+text,tab:rangelabels person,computed,PASS,,
+text,tab:rangelabels curb,computed,PASS,,
+text,tab:rangelabels crosswalk,computed,PASS,,
+text,tab:rangelabels stairs,computed,PASS,,
+text,tab:rangelabels pothole,computed,PASS,,
+text,tab:rangelabels all,computed,PASS,,
+text,tab:e1 pretrained,computed,PASS,,
+text,tab:e1 local,computed,PASS,,
+text,tab:e1 fedavg,computed,PASS,,
+text,tab:e1 fedprox,computed,PASS,,
+text,tab:e1 scaffold,computed,PASS,,
+text,tab:e1 fedrep,computed,PASS,,
+text,tab:e1 hier_st,computed,PASS,,
+text,tab:e1 hier_mt,computed,PASS,,
+text,tab:e1 fedsto,computed,PASS,,
+text,tab:e1 semifl,computed,PASS,,
+text,tab:e1 central,computed,PASS,,
+text,tab:e1 fedv2x,computed,PASS,,
+text,abstract: E1,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_grid.json, mc_temporal.json, mobility_sumo.json, yolo11_budget.json"
+text,abstract: E7,computed,PASS,,"results/published/v2x_pseudolabel_mc.json, mc_grid.json, mc_temporal.json, mobility_sumo.json, yolo11_budget.json"
+text,C7: E1,computed,PASS,,
+text,E1: means,computed,PASS,,
+text,E1: H1,computed,PASS,,
+text,E1: H3,computed,PASS,,
+text,E1: SemiFL,computed,PASS,,
+text,E1: H4,computed,PASS,,
+text,E1: pooled steps,computed,PASS,,
+text,E1: H2,computed,PASS,,
+text,discussion: SemiFL gap,computed,PASS,,results/published/mobility_modes.json
+text,E3: WAN,computed,PASS,,
+text,E3: target,computed,PASS,,
+text,tab:e7 A1,computed,PASS,,
+text,tab:e7 A2,computed,PASS,,
+text,tab:e7 A3,computed,PASS,,
+text,tab:e7 A4,computed,PASS,,
+text,tab:e7 A5,computed,PASS,,
+text,tab:e7 A6,computed,PASS,,
+text,tab:e7 A7,computed,PASS,,
+text,tab:e7 A8,computed,PASS,,
+text,tab:e7 I1,computed,PASS,,
+text,tab:e7 I2,computed,PASS,,
+text,E7: A2,computed,PASS,,
+text,E7: participation,computed,PASS,,
+text,E8: scope worth,computed,PASS,,
+text,RQ4: laptop cost,computed,PASS,,
+text,tab:devices params,measured,PASS,,results/phase3/zoo_efficiency.json
+text,tab:devices gpu,measured,PASS,,results/phase3/zoo_efficiency.json
+text,tab:devices energy,measured,PASS,,results/phase3/zoo_efficiency.json
+text,tab:devices cpu,measured,PASS,,results/phase3/zoo_efficiency.json
+text,tab:devices cpu int8,measured,PASS,,results/phase3/zoo_efficiency.json
+text,tab:devices size,measured,PASS,,results/phase3/zoo_efficiency.json
+text,tab:devices map,measured,PASS,,results/phase3/zoo_efficiency.json
+text,E6: dims,computed,PASS,,
+text,E6: trade-off,computed,PASS,,
+text,tab:privacy full 0.5,computed,PASS,,
+text,tab:privacy full 1.0,computed,PASS,,
+text,tab:privacy cls 1.0,computed,PASS,,
+text,tab:privacy cls 2.0,computed,PASS,,
+text,tab:privacy cls 4.0,computed,PASS,,
+text,J4: results,computed,PASS,,
+manuscript,pending tag [ID] x1,pending,n/a,result not yet produced,docs/experiment_registry.csv; expectations in docs/preregistered_targets.csv

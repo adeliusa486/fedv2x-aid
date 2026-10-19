@@ -1,0 +1,211 @@
+{
+ "groups": 6,
+ "n_pop": 10000,
+ "n_safe": 2000,
+ "r0": 0.6,
+ "churn": 0.05,
+ "eps": 0.01,
+ "bootstrap": 1000,
+ "rounds": 100,
+ "scenarios": {
+  "plateau": {
+   "mu": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "s": 0.003
+  },
+  "one_group_decay": {
+   "mu": [
+    0.0005,
+    0.0005,
+    0.0005,
+    0.0005,
+    0.0005,
+    -0.001
+   ],
+   "s": 0.003
+  },
+  "learning": {
+   "mu": [
+    0.001,
+    0.001,
+    0.001,
+    0.001,
+    0.001,
+    0.001
+   ],
+   "s": 0.003
+  }
+ },
+ "fallback": [
+  {
+   "regression": -0.02,
+   "variant": "prev",
+   "reps": 1000,
+   "p_release": 0.001,
+   "p_release_beyond_tolerance": 0.001
+  },
+  {
+   "regression": -0.02,
+   "variant": "prev+fallback",
+   "reps": 1000,
+   "p_release": 0.641,
+   "p_release_beyond_tolerance": 0.037
+  },
+  {
+   "regression": -0.03,
+   "variant": "prev",
+   "reps": 1000,
+   "p_release": 0.0,
+   "p_release_beyond_tolerance": 0.0
+  },
+  {
+   "regression": -0.03,
+   "variant": "prev+fallback",
+   "reps": 1000,
+   "p_release": 0.282,
+   "p_release_beyond_tolerance": 0.012
+  },
+  {
+   "regression": -0.04,
+   "variant": "prev",
+   "reps": 1000,
+   "p_release": 0.0,
+   "p_release_beyond_tolerance": 0.0
+  },
+  {
+   "regression": -0.04,
+   "variant": "prev+fallback",
+   "reps": 1000,
+   "p_release": 0.057,
+   "p_release_beyond_tolerance": 0.026
+  }
+ ],
+ "drift": [
+  {
+   "scenario": "plateau",
+   "variant": "prev",
+   "reps": 200,
+   "worst_group_change_mean": -0.0005568750000000005,
+   "worst_group_change_p05": -0.0031500000000000412,
+   "p_some_group_below_eps": 0.015,
+   "releases_mean": 0.115,
+   "safety_set_optimism_mean": 0.0005657291666666672
+  },
+  {
+   "scenario": "plateau",
+   "variant": "prev+fallback",
+   "reps": 200,
+   "worst_group_change_mean": -0.0048737500000000065,
+   "worst_group_change_p05": -0.012387500000000023,
+   "p_some_group_below_eps": 0.12,
+   "releases_mean": 2.785,
+   "safety_set_optimism_mean": 0.0032552083333333348
+  },
+  {
+   "scenario": "plateau",
+   "variant": "prev+anchor",
+   "reps": 200,
+   "worst_group_change_mean": -0.0004825000000000007,
+   "worst_group_change_p05": -0.002649999999999991,
+   "p_some_group_below_eps": 0.01,
+   "releases_mean": 0.095,
+   "safety_set_optimism_mean": 0.0005045833333333334
+  },
+  {
+   "scenario": "plateau",
+   "variant": "prev+anchor+fallback",
+   "reps": 200,
+   "worst_group_change_mean": -0.003244374999999998,
+   "worst_group_change_p05": -0.00916249999999994,
+   "p_some_group_below_eps": 0.045,
+   "releases_mean": 1.58,
+   "safety_set_optimism_mean": 0.0021672916666666646
+  },
+  {
+   "scenario": "one_group_decay",
+   "variant": "prev",
+   "reps": 200,
+   "worst_group_change_mean": -0.000935625000000001,
+   "worst_group_change_p05": -0.004425000000000017,
+   "p_some_group_below_eps": 0.025,
+   "releases_mean": 0.125,
+   "safety_set_optimism_mean": 0.0006375000000000008
+  },
+  {
+   "scenario": "one_group_decay",
+   "variant": "prev+fallback",
+   "reps": 200,
+   "worst_group_change_mean": -0.005657499999999999,
+   "worst_group_change_p05": -0.01714375000000005,
+   "p_some_group_below_eps": 0.16,
+   "releases_mean": 3.215,
+   "safety_set_optimism_mean": 0.0038963541666666656
+  },
+  {
+   "scenario": "one_group_decay",
+   "variant": "prev+anchor",
+   "reps": 200,
+   "worst_group_change_mean": -0.0006425000000000003,
+   "worst_group_change_p05": -0.002712499999999988,
+   "p_some_group_below_eps": 0.015,
+   "releases_mean": 0.1,
+   "safety_set_optimism_mean": 0.0004532291666666674
+  },
+  {
+   "scenario": "one_group_decay",
+   "variant": "prev+anchor+fallback",
+   "reps": 200,
+   "worst_group_change_mean": -0.003860625000000002,
+   "worst_group_change_p05": -0.011637499999999995,
+   "p_some_group_below_eps": 0.07,
+   "releases_mean": 1.77,
+   "safety_set_optimism_mean": 0.0026880208333333335
+  },
+  {
+   "scenario": "learning",
+   "variant": "prev",
+   "reps": 200,
+   "worst_group_change_mean": 0.03809312499999999,
+   "worst_group_change_p05": 0.0,
+   "p_some_group_below_eps": 0.005,
+   "releases_mean": 2.24,
+   "safety_set_optimism_mean": 0.002841770833333328
+  },
+  {
+   "scenario": "learning",
+   "variant": "prev+fallback",
+   "reps": 200,
+   "worst_group_change_mean": 0.038134375,
+   "worst_group_change_p05": 0.0014624999999999452,
+   "p_some_group_below_eps": 0.01,
+   "releases_mean": 11.745,
+   "safety_set_optimism_mean": 0.009462187499999995
+  },
+  {
+   "scenario": "learning",
+   "variant": "prev+anchor",
+   "reps": 200,
+   "worst_group_change_mean": 0.03902625,
+   "worst_group_change_p05": 0.0,
+   "p_some_group_below_eps": 0.005,
+   "releases_mean": 2.265,
+   "safety_set_optimism_mean": 0.0030088541666666623
+  },
+  {
+   "scenario": "learning",
+   "variant": "prev+anchor+fallback",
+   "reps": 200,
+   "worst_group_change_mean": 0.03762000000000001,
+   "worst_group_change_p05": 0.004674999999999925,
+   "p_some_group_below_eps": 0.0,
+   "releases_mean": 9.885,
+   "safety_set_optimism_mean": 0.009479999999999994
+  }
+ ]
+}

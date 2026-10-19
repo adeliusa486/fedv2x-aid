@@ -1,0 +1,12 @@
+{
+ "yolo11n": {
+  "npu": {
+   "ok": true,
+   "seconds": 851.1,
+   "binary_MB": 10.942701,
+   "sha256": "f334c3ea553cc0d3c114bf0206abedb07fe6bb86467651aef6b00d3ed10af310",
+   "contexts": 5,
+   "error": null
+  }
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "weights": "<data_root>/datasets/yolo11s.pt",
+ "n_images": 1000,
+ "seed": 20261017,
+ "fp16": {
+  "max_abs_diff_raw_head_outputs": 0.0,
+  "max_abs_diff_class_prob": 0.0,
+  "max_abs_diff_box_px": 0.0,
+  "max_abs_diff_split_vs_full_in_memory": 0.0,
+  "cache_bytes_per_image": 2867200.384,
+  "shapes": {
+   "p3": [
+    128,
+    80,
+    80
+   ],
+   "p4": [
+    256,
+    40,
+    40
+   ],
+   "p5": [
+    512,
+    20,
+    20
+   ]
+  },
+  "trunk_images_per_s": 120.47606253248296,
+  "image_decode_letterbox_images_per_s": 11.12505697697152,
+  "cache_read_random_images_per_s": 65.57529804658247,
+  "cache_read_random_MB_per_s": 188.01751974007573,
+  "note_read": "read right after writing; the OS file cache may hold part of the data"
+ },
+ "fp32": {
+  "max_abs_diff_raw_head_outputs": 0.065704345703125,
+  "max_abs_diff_class_prob": 0.0047841668128967285,
+  "max_abs_diff_box_px": 0.19573974609375,
+  "max_abs_diff_split_vs_full_in_memory": 0.0,
+  "cache_bytes_per_image": 2867200.384,
+  "shapes": {
+   "p3": [
+    128,
+    80,
+    80
+   ],
+   "p4": [
+    256,
+    40,
+    40
+   ],
+   "p5": [
+    512,
+    20,
+    20
+   ]
+  },
+  "trunk_images_per_s": 86.77472198465266,
+  "image_decode_letterbox_images_per_s": 11.19485017845377,
+  "cache_read_random_images_per_s": 55.877806625457836,
+  "cache_read_random_MB_per_s": 160.21286861359044,
+  "note_read": "read right after writing; the OS file cache may hold part of the data"
+ },
+ "pass": true
+}

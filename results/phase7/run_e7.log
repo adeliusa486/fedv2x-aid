@@ -1,0 +1,12 @@
+A1 fedv2x-no_v2x_s0: exit 0, 842 s
+A2 fedv2x-pm_s0: exit 0, 881 s
+A3 fedv2x-c_s0: exit 0, 934 s
+A4 fedv2x-no_range_s0: exit 0, 849 s
+A5 fedv2x-no_scope_s0: exit 0, 639 s
+A6 fedv2x-no_quality_s0: exit 0, 939 s
+A7 fedv2x-fixed_rsu_s0: exit 0, 892 s
+A8 fedv2x-no_normbound_s0: exit 0, 977 s
+I1 fedv2x-pm-no_scope_s0: exit 0, 622 s
+I2 fedv2x-no_range-no_scope_s0: exit 0, 642 s
+P50 fedv2x-part0.50_s0: exit 0, 726 s
+P25 fedv2x-part0.25_s0: exit 0, 575 s

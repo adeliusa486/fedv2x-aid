@@ -1,0 +1,26 @@
+[
+ {
+  "file": "fedv2x-dpcls_z1.0_s0.json",
+  "z": 1.0,
+  "max_participations": 50,
+  "delta": 1e-05,
+  "eps_rdp": 58.93,
+  "eps_closed_form": 58.93
+ },
+ {
+  "file": "fedv2x-dpcls_z2.0_s0.json",
+  "z": 2.0,
+  "max_participations": 50,
+  "delta": 1e-05,
+  "eps_rdp": 23.22,
+  "eps_closed_form": 23.22
+ },
+ {
+  "file": "fedv2x-dpcls_z4.0_s0.json",
+  "z": 4.0,
+  "max_participations": 50,
+  "delta": 1e-05,
+  "eps_rdp": 10.05,
+  "eps_closed_form": 10.05
+ }
+]

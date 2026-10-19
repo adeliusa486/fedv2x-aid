@@ -1,0 +1,3 @@
+12001 images -> E:\fedv2x_work\zoo\data\images\train in 98 s
+2002 images -> E:\fedv2x_work\zoo\data\images\val in 28 s
+{'train': 12001, 'val': 2002}

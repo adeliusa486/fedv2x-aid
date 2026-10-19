@@ -1,0 +1,22 @@
+  25000 hashed, 18 s
+  50000 hashed, 138 s
+  75000 hashed, 286 s
+  100000 hashed, 382 s
+  125000 hashed, 496 s
+  150000 hashed, 572 s
+<work>\fedv2x-aid\.venv\Lib\site-packages\PIL\Image.py:3578: DecompressionBombWarning: Image size (95664000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  warnings.warn(
+  175000 hashed, 715 s
+  200000 hashed, 749 s
+  225000 hashed, 806 s
+  250000 hashed, 874 s
+{
+ "images": 263857,
+ "unreadable": [],
+ "max_hamming": 4,
+ "pairs_within_distance": 153005,
+ "components": 246559,
+ "images_in_multi_image_components": 23970,
+ "largest_component": 7574,
+ "seconds": 925.9
+}

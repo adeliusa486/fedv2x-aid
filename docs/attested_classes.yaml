@@ -1,0 +1,1165 @@
+generated_by: src/data/attested_classes.py
+rule: a class is attested by a source if its human labels contain at least one box
+  of that class
+sources:
+  coco:
+    images: 40000
+    classes:
+    - person
+    - dog
+    - cat
+    - bird
+    - horse
+    - cow
+    - sheep
+    - car
+    - bus
+    - truck
+    - motorcycle
+    - bicycle
+    - skateboard
+    - train
+    - traffic light
+    - stop sign
+    - fire hydrant
+    - parking meter
+    - bench
+    - potted plant
+    - backpack
+    - handbag
+    - suitcase
+    - umbrella
+    - bottle
+    - cup
+    - ball
+    - cell phone
+    - book
+    - chair
+    - couch
+    - bed
+    - table
+    - toilet
+    - sink
+    - tv
+    - laptop
+    - refrigerator
+    - microwave
+    - oven
+    - clock
+    - keyboard
+    - mouse
+    - remote
+    - scissors
+    - knife
+    - fork
+    - spoon
+    - bowl
+    - toothbrush
+    - banana
+    - apple
+    - orange
+    human_boxes:
+      person: 86115
+      dog: 1799
+      cat: 1555
+      bird: 3567
+      horse: 2156
+      cow: 2799
+      sheep: 3313
+      car: 14735
+      bus: 2044
+      truck: 3296
+      motorcycle: 2856
+      bicycle: 2500
+      skateboard: 1832
+      train: 1534
+      traffic light: 4179
+      stop sign: 653
+      fire hydrant: 630
+      parking meter: 410
+      bench: 3328
+      potted plant: 2973
+      backpack: 3037
+      handbag: 4167
+      suitcase: 2057
+      umbrella: 3788
+      bottle: 8131
+      cup: 6967
+      ball: 2058
+      cell phone: 2245
+      book: 8050
+      chair: 12902
+      couch: 1974
+      bed: 1373
+      table: 5309
+      toilet: 1493
+      sink: 1916
+      tv: 1975
+      laptop: 1601
+      refrigerator: 905
+      microwave: 554
+      oven: 1088
+      clock: 2128
+      keyboard: 1036
+      mouse: 855
+      remote: 1991
+      scissors: 498
+      knife: 2588
+      fork: 1791
+      spoon: 1962
+      bowl: 4782
+      toothbrush: 684
+      banana: 3103
+      apple: 1933
+      orange: 2127
+    images_with_class:
+      person: 21650
+      dog: 1434
+      cat: 1330
+      bird: 1083
+      horse: 1002
+      cow: 678
+      sheep: 525
+      car: 4127
+      bus: 1329
+      truck: 2057
+      motorcycle: 1178
+      bicycle: 1151
+      skateboard: 1155
+      train: 1225
+      traffic light: 1410
+      stop sign: 549
+      fire hydrant: 584
+      parking meter: 231
+      bench: 1897
+      potted plant: 1512
+      backpack: 1904
+      handbag: 2308
+      suitcase: 782
+      umbrella: 1336
+      bottle: 2855
+      cup: 3082
+      ball: 1384
+      cell phone: 1691
+      book: 1788
+      chair: 4301
+      couch: 1504
+      bed: 1230
+      table: 3957
+      toilet: 1201
+      sink: 1582
+      tv: 1546
+      laptop: 1183
+      refrigerator: 794
+      microwave: 503
+      oven: 941
+      clock: 1579
+      keyboard: 742
+      mouse: 679
+      remote: 1051
+      scissors: 325
+      knife: 1452
+      fork: 1178
+      spoon: 1144
+      bowl: 2359
+      toothbrush: 343
+      banana: 782
+      apple: 521
+      orange: 604
+    evaluated_groups:
+      vehicle: 26965
+      person: 86115
+  mtsd:
+    images: 30000
+    classes:
+    - traffic sign
+    - yield sign
+    - do not enter sign
+    - one way sign
+    - pedestrian crossing sign
+    - speed limit sign
+    - construction sign
+    - bus stop sign
+    human_boxes:
+      traffic sign: 66370
+      yield sign: 971
+      do not enter sign: 461
+      one way sign: 890
+      pedestrian crossing sign: 1881
+      speed limit sign: 2544
+      construction sign: 348
+      bus stop sign: 138
+    images_with_class:
+      traffic sign: 24605
+      yield sign: 848
+      do not enter sign: 407
+      one way sign: 724
+      pedestrian crossing sign: 1487
+      speed limit sign: 2144
+      construction sign: 306
+      bus stop sign: 129
+    evaluated_groups: {}
+  oiv7:
+    images: 117612
+    classes:
+    - person
+    - child
+    - wheelchair
+    - dog
+    - cat
+    - bird
+    - horse
+    - cow
+    - sheep
+    - goat
+    - camel
+    - car
+    - bus
+    - truck
+    - van
+    - taxi
+    - ambulance
+    - motorcycle
+    - bicycle
+    - skateboard
+    - train
+    - golf cart
+    - shopping cart
+    - traffic light
+    - stop sign
+    - traffic sign
+    - street light
+    - fire hydrant
+    - parking meter
+    - bench
+    - trash can
+    - billboard
+    - fountain
+    - potted plant
+    - barrel
+    - ladder
+    - tent
+    - sculpture
+    - stairs
+    - swimming pool
+    - door
+    - door handle
+    - window
+    - building
+    - tree
+    - palm tree
+    - plant
+    - backpack
+    - handbag
+    - suitcase
+    - umbrella
+    - bottle
+    - cup
+    - box
+    - plastic bag
+    - tire
+    - ball
+    - cell phone
+    - glasses
+    - book
+    - can
+    - toy
+    - chair
+    - couch
+    - bed
+    - table
+    - desk
+    - coffee table
+    - nightstand
+    - chest of drawers
+    - wardrobe
+    - toilet
+    - sink
+    - tv
+    - laptop
+    - refrigerator
+    - microwave
+    - oven
+    - stove
+    - washing machine
+    - bathtub
+    - shower
+    - shelf
+    - bookcase
+    - stool
+    - mirror
+    - curtain
+    - cabinet
+    - countertop
+    - lamp
+    - ceiling fan
+    - pillow
+    - clock
+    - keyboard
+    - mouse
+    - remote
+    - scissors
+    - knife
+    - fork
+    - spoon
+    - bowl
+    - plate
+    - kettle
+    - toothbrush
+    - towel
+    - banana
+    - apple
+    - orange
+    human_boxes:
+      person: 177436
+      child: 21746
+      wheelchair: 1843
+      dog: 3505
+      cat: 2969
+      bird: 5175
+      horse: 4532
+      cow: 8433
+      sheep: 4391
+      goat: 2807
+      camel: 1486
+      car: 27283
+      bus: 3511
+      truck: 3788
+      van: 3584
+      taxi: 5570
+      ambulance: 564
+      motorcycle: 4389
+      bicycle: 6097
+      skateboard: 2035
+      train: 2466
+      golf cart: 662
+      shopping cart: 2815
+      traffic light: 10288
+      stop sign: 443
+      traffic sign: 5113
+      street light: 12877
+      fire hydrant: 463
+      parking meter: 219
+      bench: 4378
+      trash can: 2233
+      billboard: 6802
+      fountain: 2468
+      potted plant: 23430
+      barrel: 2357
+      ladder: 1284
+      tent: 3908
+      sculpture: 4603
+      stairs: 2818
+      swimming pool: 2388
+      door: 5547
+      door handle: 995
+      window: 52865
+      building: 42402
+      tree: 52710
+      palm tree: 9780
+      plant: 22947
+      backpack: 1383
+      handbag: 2320
+      suitcase: 3340
+      umbrella: 4157
+      bottle: 8118
+      cup: 8247
+      box: 4422
+      plastic bag: 1124
+      tire: 21174
+      ball: 3798
+      cell phone: 2705
+      glasses: 9336
+      book: 33962
+      can: 3234
+      toy: 10264
+      chair: 38262
+      couch: 3183
+      bed: 3746
+      table: 21614
+      desk: 6679
+      coffee table: 2151
+      nightstand: 1246
+      chest of drawers: 1547
+      wardrobe: 77
+      toilet: 1630
+      sink: 3650
+      tv: 2504
+      laptop: 4801
+      refrigerator: 1136
+      microwave: 1541
+      oven: 1918
+      stove: 1283
+      washing machine: 783
+      bathtub: 854
+      shower: 357
+      shelf: 19700
+      bookcase: 5185
+      stool: 1528
+      mirror: 2024
+      curtain: 4626
+      cabinet: 16714
+      countertop: 5768
+      lamp: 4003
+      ceiling fan: 598
+      pillow: 5358
+      clock: 1287
+      keyboard: 3580
+      mouse: 926
+      remote: 254
+      scissors: 406
+      knife: 967
+      fork: 2668
+      spoon: 2704
+      bowl: 5444
+      plate: 5776
+      kettle: 832
+      toothbrush: 255
+      towel: 411
+      banana: 1794
+      apple: 4347
+      orange: 6873
+    images_with_class:
+      person: 37577
+      child: 7709
+      wheelchair: 930
+      dog: 2179
+      cat: 2045
+      bird: 1766
+      horse: 2081
+      cow: 1763
+      sheep: 1250
+      goat: 1173
+      camel: 787
+      car: 6882
+      bus: 1774
+      truck: 2011
+      van: 1925
+      taxi: 1470
+      ambulance: 352
+      motorcycle: 1778
+      bicycle: 2164
+      skateboard: 1151
+      train: 1660
+      golf cart: 343
+      shopping cart: 1607
+      traffic light: 1557
+      stop sign: 388
+      traffic sign: 1582
+      street light: 2188
+      fire hydrant: 423
+      parking meter: 181
+      bench: 1576
+      trash can: 1039
+      billboard: 1567
+      fountain: 1570
+      potted plant: 3242
+      barrel: 703
+      ladder: 775
+      tent: 1591
+      sculpture: 1843
+      stairs: 1609
+      swimming pool: 1718
+      door: 2502
+      door handle: 598
+      window: 5546
+      building: 16247
+      tree: 12122
+      palm tree: 1778
+      plant: 4519
+      backpack: 739
+      handbag: 1562
+      suitcase: 1418
+      umbrella: 1557
+      bottle: 1990
+      cup: 2959
+      box: 1600
+      plastic bag: 526
+      tire: 3553
+      ball: 1671
+      cell phone: 1652
+      glasses: 3770
+      book: 2643
+      can: 1343
+      toy: 1924
+      chair: 5264
+      couch: 1798
+      bed: 2055
+      table: 8516
+      desk: 3203
+      coffee table: 834
+      nightstand: 493
+      chest of drawers: 561
+      wardrobe: 42
+      toilet: 890
+      sink: 1491
+      tv: 1598
+      laptop: 2089
+      refrigerator: 574
+      microwave: 457
+      oven: 544
+      stove: 496
+      washing machine: 353
+      bathtub: 550
+      shower: 214
+      shelf: 2816
+      bookcase: 1925
+      stool: 594
+      mirror: 1177
+      curtain: 1677
+      cabinet: 2232
+      countertop: 1817
+      lamp: 1543
+      ceiling fan: 442
+      pillow: 1296
+      clock: 937
+      keyboard: 1782
+      mouse: 641
+      remote: 198
+      scissors: 293
+      knife: 669
+      fork: 1071
+      spoon: 1096
+      bowl: 1513
+      plate: 1601
+      kettle: 494
+      toothbrush: 123
+      towel: 150
+      banana: 741
+      apple: 1132
+      orange: 962
+    evaluated_groups:
+      vehicle: 57914
+      person: 199182
+      stairs: 2818
+  oiv7x:
+    images: 3522
+    classes:
+    - person
+    - child
+    - dog
+    - cat
+    - bird
+    - horse
+    - cow
+    - sheep
+    - camel
+    - car
+    - bus
+    - truck
+    - bicycle
+    - shopping cart
+    - bench
+    - fountain
+    - potted plant
+    - barrel
+    - ladder
+    - tent
+    - sculpture
+    - stairs
+    - swimming pool
+    - door
+    - door handle
+    - window
+    - building
+    - tree
+    - palm tree
+    - plant
+    - backpack
+    - handbag
+    - suitcase
+    - umbrella
+    - bottle
+    - cup
+    - box
+    - plastic bag
+    - tire
+    - cell phone
+    - glasses
+    - book
+    - toy
+    - chair
+    - couch
+    - bed
+    - table
+    - desk
+    - coffee table
+    - nightstand
+    - chest of drawers
+    - wardrobe
+    - toilet
+    - sink
+    - tv
+    - laptop
+    - refrigerator
+    - microwave
+    - oven
+    - stove
+    - washing machine
+    - bathtub
+    - shelf
+    - bookcase
+    - stool
+    - mirror
+    - curtain
+    - cabinet
+    - countertop
+    - lamp
+    - ceiling fan
+    - pillow
+    - clock
+    - keyboard
+    - fork
+    - bowl
+    - plate
+    - kettle
+    - towel
+    - apple
+    human_boxes:
+      person: 1889
+      child: 135
+      dog: 36
+      cat: 25
+      bird: 1
+      horse: 2
+      cow: 1
+      sheep: 1
+      camel: 6
+      car: 28
+      bus: 1
+      truck: 2
+      bicycle: 5
+      shopping cart: 3
+      bench: 45
+      fountain: 1
+      potted plant: 343
+      barrel: 1
+      ladder: 2
+      tent: 11
+      sculpture: 3
+      stairs: 17
+      swimming pool: 10
+      door: 175
+      door handle: 9
+      window: 888
+      building: 1347
+      tree: 240
+      palm tree: 73
+      plant: 252
+      backpack: 3
+      handbag: 5
+      suitcase: 6
+      umbrella: 8
+      bottle: 11
+      cup: 20
+      box: 25
+      plastic bag: 1
+      tire: 10
+      cell phone: 1
+      glasses: 19
+      book: 301
+      toy: 37
+      chair: 4349
+      couch: 442
+      bed: 812
+      table: 1235
+      desk: 556
+      coffee table: 2925
+      nightstand: 1547
+      chest of drawers: 2031
+      wardrobe: 267
+      toilet: 10
+      sink: 94
+      tv: 72
+      laptop: 22
+      refrigerator: 14
+      microwave: 32
+      oven: 39
+      stove: 21
+      washing machine: 2
+      bathtub: 5
+      shelf: 831
+      bookcase: 97
+      stool: 112
+      mirror: 45
+      curtain: 504
+      cabinet: 1954
+      countertop: 276
+      lamp: 114
+      ceiling fan: 71
+      pillow: 933
+      clock: 6
+      keyboard: 8
+      fork: 1
+      bowl: 24
+      plate: 21
+      kettle: 6
+      towel: 2
+      apple: 5
+    images_with_class:
+      person: 553
+      child: 80
+      dog: 25
+      cat: 14
+      bird: 1
+      horse: 1
+      cow: 1
+      sheep: 1
+      camel: 1
+      car: 6
+      bus: 1
+      truck: 2
+      bicycle: 3
+      shopping cart: 1
+      bench: 22
+      fountain: 1
+      potted plant: 120
+      barrel: 1
+      ladder: 2
+      tent: 8
+      sculpture: 1
+      stairs: 12
+      swimming pool: 10
+      door: 117
+      door handle: 4
+      window: 404
+      building: 1126
+      tree: 96
+      palm tree: 16
+      plant: 65
+      backpack: 3
+      handbag: 5
+      suitcase: 4
+      umbrella: 5
+      bottle: 6
+      cup: 12
+      box: 12
+      plastic bag: 1
+      tire: 4
+      cell phone: 1
+      glasses: 12
+      book: 34
+      toy: 13
+      chair: 1010
+      couch: 297
+      bed: 602
+      table: 786
+      desk: 419
+      coffee table: 1558
+      nightstand: 818
+      chest of drawers: 1233
+      wardrobe: 216
+      toilet: 10
+      sink: 88
+      tv: 66
+      laptop: 18
+      refrigerator: 14
+      microwave: 27
+      oven: 30
+      stove: 20
+      washing machine: 2
+      bathtub: 5
+      shelf: 237
+      bookcase: 57
+      stool: 45
+      mirror: 30
+      curtain: 250
+      cabinet: 662
+      countertop: 202
+      lamp: 41
+      ceiling fan: 52
+      pillow: 211
+      clock: 6
+      keyboard: 7
+      fork: 1
+      bowl: 10
+      plate: 7
+      kettle: 5
+      towel: 1
+      apple: 2
+    evaluated_groups:
+      vehicle: 36
+      person: 2024
+      stairs: 17
+  rf_aid:
+    images: 673
+    classes:
+    - pedestrian signal
+    - crosswalk
+    human_boxes:
+      pedestrian signal: 120
+      crosswalk: 275
+    images_with_class:
+      pedestrian signal: 110
+      crosswalk: 274
+    evaluated_groups:
+      crosswalk: 275
+  rf_atm:
+    images: 345
+    classes:
+    - atm
+    human_boxes:
+      atm: 446
+    images_with_class:
+      atm: 344
+    evaluated_groups: {}
+  rf_blind725:
+    images: 709
+    classes:
+    - pillar
+    human_boxes:
+      pillar: 83
+    images_with_class:
+      pillar: 27
+    evaluated_groups: {}
+  rf_bump1:
+    images: 1451
+    classes:
+    - speed bump
+    human_boxes:
+      speed bump: 941
+    images_with_class:
+      speed bump: 873
+    evaluated_groups: {}
+  rf_bump2:
+    images: 2809
+    classes:
+    - pothole
+    - speed bump
+    human_boxes:
+      pothole: 4815
+      speed bump: 923
+    images_with_class:
+      pothole: 1927
+      speed bump: 904
+    evaluated_groups:
+      pothole: 4815
+  rf_escooter:
+    images: 2502
+    classes:
+    - e-scooter
+    human_boxes:
+      e-scooter: 3434
+    images_with_class:
+      e-scooter: 2502
+    evaluated_groups: {}
+  rf_esera:
+    images: 532
+    classes:
+    - crosswalk
+    - bollard
+    human_boxes:
+      crosswalk: 190
+      bollard: 94
+    images_with_class:
+      crosswalk: 190
+      bollard: 41
+    evaluated_groups:
+      crosswalk: 190
+  rf_etg:
+    images: 2015
+    classes:
+    - e-scooter
+    - bollard
+    human_boxes:
+      e-scooter: 697
+      bollard: 5522
+    images_with_class:
+      e-scooter: 378
+      bollard: 1641
+    evaluated_groups: {}
+  rf_exit:
+    images: 482
+    classes:
+    - exit sign
+    human_boxes:
+      exit sign: 494
+    images_with_class:
+      exit sign: 426
+    evaluated_groups: {}
+  rf_obstacle:
+    images: 8903
+    classes:
+    - open hole
+    human_boxes:
+      open hole: 965
+    images_with_class:
+      open hole: 835
+    evaluated_groups:
+      pothole: 965
+  rf_openhole:
+    images: 635
+    classes:
+    - traffic cone
+    - bollard
+    - barrier
+    - open hole
+    human_boxes:
+      traffic cone: 231
+      bollard: 313
+      barrier: 252
+      open hole: 316
+    images_with_class:
+      traffic cone: 152
+      bollard: 140
+      barrier: 75
+      open hole: 256
+    evaluated_groups:
+      pothole: 316
+  rf_pillar:
+    images: 298
+    classes:
+    - pillar
+    human_boxes:
+      pillar: 72
+    images_with_class:
+      pillar: 72
+    evaluated_groups: {}
+  rf_risk:
+    images: 10920
+    classes:
+    - pedestrian signal
+    - crosswalk
+    - ramp
+    - pothole
+    - sidewalk crack
+    - elevator
+    human_boxes:
+      pedestrian signal: 868
+      crosswalk: 1393
+      ramp: 2352
+      pothole: 4558
+      sidewalk crack: 1407
+      elevator: 2593
+    images_with_class:
+      pedestrian signal: 793
+      crosswalk: 969
+      ramp: 1614
+      pothole: 1268
+      sidewalk crack: 556
+      elevator: 2054
+    evaluated_groups:
+      crosswalk: 1393
+      pothole: 4558
+  rf_sideguide:
+    images: 6400
+    classes:
+    - stroller
+    - e-scooter
+    - bollard
+    - sidewalk sign
+    - kiosk
+    - barrier
+    human_boxes:
+      stroller: 54
+      e-scooter: 24
+      bollard: 5215
+      sidewalk sign: 2926
+      kiosk: 140
+      barrier: 208
+    images_with_class:
+      stroller: 51
+      e-scooter: 18
+      bollard: 1635
+      sidewalk sign: 1591
+      kiosk: 120
+      barrier: 146
+    evaluated_groups: {}
+  rf_starvision:
+    images: 9197
+    classes:
+    - crosswalk button
+    - sidewalk closed sign
+    - exit sign
+    - wet floor sign
+    - traffic cone
+    - stairs
+    - escalator
+    - elevator
+    human_boxes:
+      crosswalk button: 212
+      sidewalk closed sign: 185
+      exit sign: 230
+      wet floor sign: 472
+      traffic cone: 1058
+      stairs: 209
+      escalator: 446
+      elevator: 341
+    images_with_class:
+      crosswalk button: 200
+      sidewalk closed sign: 181
+      exit sign: 209
+      wet floor sign: 449
+      traffic cone: 442
+      stairs: 151
+      escalator: 290
+      elevator: 257
+    evaluated_groups:
+      stairs: 209
+  rf_strollers1:
+    images: 1281
+    classes:
+    - stroller
+    human_boxes:
+      stroller: 1377
+    images_with_class:
+      stroller: 1265
+    evaluated_groups: {}
+  rf_strollers2:
+    images: 1044
+    classes:
+    - stroller
+    human_boxes:
+      stroller: 1140
+    images_with_class:
+      stroller: 1028
+    evaluated_groups: {}
+  rf_tactile:
+    images: 171
+    classes:
+    - tactile paving
+    human_boxes:
+      tactile paving: 177
+    images_with_class:
+      tactile paving: 171
+    evaluated_groups: {}
+  rf_underground:
+    images: 337
+    classes:
+    - exit sign
+    - escalator
+    - tactile paving
+    human_boxes:
+      exit sign: 614
+      escalator: 130
+      tactile paving: 215
+    images_with_class:
+      exit sign: 222
+      escalator: 76
+      tactile paving: 184
+    evaluated_groups: {}
+  rf_wetfloor:
+    images: 2019
+    classes:
+    - wet floor sign
+    human_boxes:
+      wet floor sign: 611
+    images_with_class:
+      wet floor sign: 609
+    evaluated_groups: {}
+  vistas:
+    images: 20000
+    classes:
+    - person
+    - cyclist
+    - motorcyclist
+    - bird
+    - car
+    - bus
+    - truck
+    - motorcycle
+    - bicycle
+    - trailer
+    - traffic light
+    - pedestrian signal
+    - traffic sign
+    - crosswalk
+    - street light
+    - utility pole
+    - pole
+    - fire hydrant
+    - parking meter
+    - bench
+    - trash can
+    - bike rack
+    - mailbox
+    - utility box
+    - billboard
+    - traffic cone
+    - barrier
+    - fence
+    - curb
+    - curb ramp
+    - pothole
+    - manhole
+    - storm drain
+    - rail track
+    - building
+    human_boxes:
+      person: 26930
+      cyclist: 2272
+      motorcyclist: 2207
+      bird: 192
+      car: 122535
+      bus: 4433
+      truck: 6652
+      motorcycle: 4408
+      bicycle: 5088
+      trailer: 249
+      traffic light: 20549
+      pedestrian signal: 6839
+      traffic sign: 71153
+      crosswalk: 15894
+      street light: 29364
+      utility pole: 29302
+      pole: 94363
+      fire hydrant: 654
+      parking meter: 274
+      bench: 1711
+      trash can: 4583
+      bike rack: 1071
+      mailbox: 487
+      utility box: 3498
+      billboard: 26990
+      traffic cone: 1957
+      barrier: 6157
+      fence: 26123
+      curb: 63452
+      curb ramp: 17258
+      pothole: 588
+      manhole: 10392
+      storm drain: 5381
+      rail track: 1007
+      building: 30608
+    images_with_class:
+      person: 7146
+      cyclist: 1355
+      motorcyclist: 1256
+      bird: 127
+      car: 18421
+      bus: 2995
+      truck: 4454
+      motorcycle: 2307
+      bicycle: 2576
+      trailer: 227
+      traffic light: 6387
+      pedestrian signal: 3891
+      traffic sign: 16682
+      crosswalk: 8370
+      street light: 13864
+      utility pole: 8611
+      pole: 17922
+      fire hydrant: 632
+      parking meter: 253
+      bench: 1024
+      trash can: 3042
+      bike rack: 535
+      mailbox: 401
+      utility box: 2786
+      billboard: 9845
+      traffic cone: 745
+      barrier: 2914
+      fence: 12472
+      curb: 16853
+      curb ramp: 8803
+      pothole: 413
+      manhole: 5359
+      storm drain: 3486
+      rail track: 712
+      building: 18249
+    evaluated_groups:
+      vehicle: 143365
+      person: 31409
+      curb: 63452
+      crosswalk: 15894
+      pothole: 588

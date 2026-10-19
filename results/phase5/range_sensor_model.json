@@ -1,0 +1,32 @@
+{
+ "source": "data/range_sensor/bench_stream_60s.csv",
+ "rows": 3866,
+ "steady_rows": 1152,
+ "forward": {
+  "valid_rate": 1.0,
+  "n_valid": 1152,
+  "mean_mm": 90.33940972222223,
+  "sigma_mm": 1.0380639261107854,
+  "min_mm": 85.0,
+  "max_mm": 93.0,
+  "target": "bench object, distance not independently measured"
+ },
+ "downward": {
+  "valid_rate": 0.0,
+  "n_valid": 0,
+  "note": "absent from its bus during the bench log; modelled with the forward sensor's parameters"
+ },
+ "emulation": {
+  "p_valid": 1.0,
+  "delta_d_m": 0.1,
+  "p_detect_drop_of_height_m": {
+   "0.08": 0.0,
+   "0.10": 0.5,
+   "0.12": 1.0,
+   "0.15": 1.0,
+   "0.20": 1.0
+  },
+  "p_false_dropoff_flat_floor": 0.0,
+  "note": "with sigma ~1 mm the noise is negligible against 0.10 m; emulation errors are geometric"
+ }
+}

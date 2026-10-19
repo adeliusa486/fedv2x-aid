@@ -1,0 +1,105 @@
+E:\fedv2x_work\cache\clients\v00\train: 300 images, 6 s
+E:\fedv2x_work\cache\clients\v00\val: 60 images, 7 s
+E:\fedv2x_work\cache\clients\v00\test: 150 images, 10 s
+E:\fedv2x_work\cache\clients\v01\train: 300 images, 16 s
+E:\fedv2x_work\cache\clients\v01\val: 59 images, 17 s
+E:\fedv2x_work\cache\clients\v01\test: 151 images, 21 s
+E:\fedv2x_work\cache\clients\v02\train: 300 images, 30 s
+E:\fedv2x_work\cache\clients\v02\val: 61 images, 32 s
+E:\fedv2x_work\cache\clients\v02\test: 149 images, 37 s
+E:\fedv2x_work\cache\clients\v03\train: 299 images, 47 s
+E:\fedv2x_work\cache\clients\v03\val: 60 images, 48 s
+E:\fedv2x_work\cache\clients\v03\test: 151 images, 54 s
+E:\fedv2x_work\cache\clients\v04\train: 300 images, 64 s
+E:\fedv2x_work\cache\clients\v04\val: 60 images, 66 s
+E:\fedv2x_work\cache\clients\v04\test: 150 images, 72 s
+E:\fedv2x_work\cache\clients\v05\train: 300 images, 82 s
+E:\fedv2x_work\cache\clients\v05\val: 60 images, 84 s
+E:\fedv2x_work\cache\clients\v05\test: 150 images, 89 s
+E:\fedv2x_work\cache\clients\v06\train: 299 images, 99 s
+E:\fedv2x_work\cache\clients\v06\val: 61 images, 100 s
+E:\fedv2x_work\cache\clients\v06\test: 150 images, 106 s
+E:\fedv2x_work\cache\clients\v07\train: 300 images, 116 s
+E:\fedv2x_work\cache\clients\v07\val: 60 images, 118 s
+E:\fedv2x_work\cache\clients\v07\test: 150 images, 126 s
+E:\fedv2x_work\cache\clients\v08\train: 301 images, 145 s
+E:\fedv2x_work\cache\clients\v08\val: 59 images, 148 s
+E:\fedv2x_work\cache\clients\v08\test: 150 images, 157 s
+E:\fedv2x_work\cache\clients\v09\train: 300 images, 172 s
+E:\fedv2x_work\cache\clients\v09\val: 60 images, 175 s
+E:\fedv2x_work\cache\clients\v09\test: 150 images, 181 s
+E:\fedv2x_work\cache\clients\v10\train: 300 images, 191 s
+E:\fedv2x_work\cache\clients\v10\val: 60 images, 193 s
+E:\fedv2x_work\cache\clients\v10\test: 150 images, 198 s
+E:\fedv2x_work\cache\clients\v11\train: 300 images, 207 s
+E:\fedv2x_work\cache\clients\v11\val: 60 images, 209 s
+E:\fedv2x_work\cache\clients\v11\test: 150 images, 213 s
+E:\fedv2x_work\cache\clients\v12\train: 300 images, 222 s
+E:\fedv2x_work\cache\clients\v12\val: 61 images, 224 s
+E:\fedv2x_work\cache\clients\v12\test: 149 images, 228 s
+E:\fedv2x_work\cache\clients\v13\train: 299 images, 237 s
+E:\fedv2x_work\cache\clients\v13\val: 61 images, 239 s
+E:\fedv2x_work\cache\clients\v13\test: 150 images, 243 s
+E:\fedv2x_work\cache\clients\v14\train: 300 images, 252 s
+E:\fedv2x_work\cache\clients\v14\val: 60 images, 253 s
+E:\fedv2x_work\cache\clients\v14\test: 150 images, 258 s
+E:\fedv2x_work\cache\clients\v15\train: 300 images, 267 s
+E:\fedv2x_work\cache\clients\v15\val: 60 images, 269 s
+E:\fedv2x_work\cache\clients\v15\test: 150 images, 274 s
+E:\fedv2x_work\cache\clients\v16\train: 301 images, 284 s
+E:\fedv2x_work\cache\clients\v16\val: 60 images, 286 s
+E:\fedv2x_work\cache\clients\v16\test: 149 images, 291 s
+E:\fedv2x_work\cache\clients\v17\train: 300 images, 301 s
+E:\fedv2x_work\cache\clients\v17\val: 60 images, 303 s
+E:\fedv2x_work\cache\clients\v17\test: 150 images, 309 s
+E:\fedv2x_work\cache\clients\v18\train: 300 images, 320 s
+E:\fedv2x_work\cache\clients\v18\val: 60 images, 323 s
+E:\fedv2x_work\cache\clients\v18\test: 150 images, 329 s
+E:\fedv2x_work\cache\clients\v19\train: 300 images, 346 s
+E:\fedv2x_work\cache\clients\v19\val: 60 images, 351 s
+E:\fedv2x_work\cache\clients\v19\test: 150 images, 362 s
+E:\fedv2x_work\cache\clients\v20\train: 300 images, 384 s
+E:\fedv2x_work\cache\clients\v20\val: 60 images, 387 s
+E:\fedv2x_work\cache\clients\v20\test: 150 images, 397 s
+E:\fedv2x_work\cache\clients\v21\train: 300 images, 412 s
+E:\fedv2x_work\cache\clients\v21\val: 60 images, 415 s
+E:\fedv2x_work\cache\clients\v21\test: 150 images, 422 s
+E:\fedv2x_work\cache\clients\r00\train: 300 images, 430 s
+E:\fedv2x_work\cache\clients\r00\val: 59 images, 431 s
+E:\fedv2x_work\cache\clients\r00\test: 151 images, 435 s
+E:\fedv2x_work\cache\clients\r01\train: 299 images, 440 s
+E:\fedv2x_work\cache\clients\r01\val: 62 images, 441 s
+E:\fedv2x_work\cache\clients\r01\test: 149 images, 443 s
+E:\fedv2x_work\cache\clients\r02\train: 300 images, 449 s
+E:\fedv2x_work\cache\clients\r02\val: 60 images, 449 s
+E:\fedv2x_work\cache\clients\r02\test: 150 images, 452 s
+E:\fedv2x_work\cache\clients\r03\train: 300 images, 457 s
+E:\fedv2x_work\cache\clients\r03\val: 60 images, 458 s
+E:\fedv2x_work\cache\clients\r03\test: 150 images, 460 s
+E:\fedv2x_work\cache\clients\r04\train: 300 images, 466 s
+E:\fedv2x_work\cache\clients\r04\val: 60 images, 468 s
+E:\fedv2x_work\cache\clients\r04\test: 150 images, 471 s
+E:\fedv2x_work\cache\clients\r05\train: 300 images, 476 s
+E:\fedv2x_work\cache\clients\r05\val: 60 images, 477 s
+E:\fedv2x_work\cache\clients\r05\test: 150 images, 480 s
+E:\fedv2x_work\cache\clients\r06\train: 300 images, 486 s
+E:\fedv2x_work\cache\clients\r06\val: 59 images, 488 s
+E:\fedv2x_work\cache\clients\r06\test: 151 images, 491 s
+E:\fedv2x_work\cache\clients\r07\train: 301 images, 497 s
+E:\fedv2x_work\cache\clients\r07\val: 60 images, 499 s
+E:\fedv2x_work\cache\clients\r07\test: 151 images, 502 s
+E:\fedv2x_work\cache\safety: 3076 images, 561 s
+E:\fedv2x_work\cache\server_labelled: 2000 images, 597 s
+{
+ "weights": "<data_root>/datasets/yolo11s.pt",
+ "precision": "fp16",
+ "imgsz": 640,
+ "letterbox": "square, pad 114",
+ "server_labelled_subset": {
+  "n": 2000,
+  "seed": 2,
+  "from": "street-level server-pool images"
+ },
+ "images": 20378,
+ "seconds": 597.4
+}

@@ -1,0 +1,199 @@
+{
+ "rule": "C, 5 m GNSS, 5 deg compass, 50 % penetration, reference-detector proposals, file order, seed 0",
+ "labels": 12164,
+ "wrong": 2346,
+ "categories": {
+  "false proposal": 484,
+  "wrong class": 299,
+  "loose box": 1423,
+  "duplicate": 140
+ },
+ "category_shares": {
+  "false proposal": 0.20630861040068202,
+  "wrong class": 0.12745098039215685,
+  "loose box": 0.6065643648763853,
+  "duplicate": 0.059676044330775786
+ },
+ "first_20_failure_frames": [
+  {
+   "frame": "000010",
+   "categories": [
+    "duplicate"
+   ],
+   "c_labels": 4
+  },
+  {
+   "frame": "000012",
+   "categories": [
+    "false proposal"
+   ],
+   "c_labels": 1
+  },
+  {
+   "frame": "000032",
+   "categories": [
+    "duplicate"
+   ],
+   "c_labels": 7
+  },
+  {
+   "frame": "000038",
+   "categories": [
+    "loose box"
+   ],
+   "c_labels": 4
+  },
+  {
+   "frame": "000039",
+   "categories": [
+    "loose box"
+   ],
+   "c_labels": 2
+  },
+  {
+   "frame": "000047",
+   "categories": [
+    "wrong class"
+   ],
+   "c_labels": 3
+  },
+  {
+   "frame": "000049",
+   "categories": [
+    "loose box",
+    "loose box",
+    "duplicate",
+    "wrong class"
+   ],
+   "c_labels": 7
+  },
+  {
+   "frame": "000050",
+   "categories": [
+    "loose box"
+   ],
+   "c_labels": 3
+  },
+  {
+   "frame": "000052",
+   "categories": [
+    "false proposal"
+   ],
+   "c_labels": 2
+  },
+  {
+   "frame": "000053",
+   "categories": [
+    "loose box",
+    "loose box"
+   ],
+   "c_labels": 4
+  },
+  {
+   "frame": "000055",
+   "categories": [
+    "loose box"
+   ],
+   "c_labels": 2
+  },
+  {
+   "frame": "000057",
+   "categories": [
+    "false proposal"
+   ],
+   "c_labels": 2
+  },
+  {
+   "frame": "000068",
+   "categories": [
+    "loose box"
+   ],
+   "c_labels": 4
+  },
+  {
+   "frame": "000075",
+   "categories": [
+    "loose box"
+   ],
+   "c_labels": 2
+  },
+  {
+   "frame": "000078",
+   "categories": [
+    "wrong class"
+   ],
+   "c_labels": 2
+  },
+  {
+   "frame": "000079",
+   "categories": [
+    "loose box",
+    "loose box"
+   ],
+   "c_labels": 3
+  },
+  {
+   "frame": "000087",
+   "categories": [
+    "false proposal"
+   ],
+   "c_labels": 3
+  },
+  {
+   "frame": "000089",
+   "categories": [
+    "loose box"
+   ],
+   "c_labels": 2
+  },
+  {
+   "frame": "000092",
+   "categories": [
+    "duplicate"
+   ],
+   "c_labels": 4
+  },
+  {
+   "frame": "000096",
+   "categories": [
+    "loose box"
+   ],
+   "c_labels": 3
+  }
+ ],
+ "worked_example": {
+  "frame": "000022",
+  "messages": 2,
+  "proposals": 7,
+  "connected_moderate": 2,
+  "prior_error_m": 5.97,
+  "prior_heading_error_deg": -0.76,
+  "consensus_pose_error_m": 14.95,
+  "consensus_heading_error_deg": -5.76,
+  "inliers": 2,
+  "pm_labels": 1,
+  "pm_correct": 0,
+  "c_labels": 1,
+  "c_correct": 1,
+  "c_label_iou_with_projection": [
+   0.431
+  ]
+ },
+ "runtime_ms_per_frame": {
+  "P": {
+   "median": 0.1978999998755171,
+   "p95": 1.6453200008072542,
+   "frames": 500
+  },
+  "PM": {
+   "median": 0.31214999944495503,
+   "p95": 2.1410300000752613,
+   "frames": 500
+  },
+  "C": {
+   "median": 5.632749999676889,
+   "p95": 241.39723499856686,
+   "frames": 500
+  }
+ }
+}

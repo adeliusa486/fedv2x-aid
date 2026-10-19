@@ -1,0 +1,21 @@
+{
+ "images_by_split_and_source": {
+  "train": {
+   "coco": 35578,
+   "mtsd": 26733,
+   "oiv7": 107712,
+   "roboflow": 48154,
+   "vistas": 17774
+  },
+  "val": {
+   "coco": 4422,
+   "mtsd": 3267,
+   "oiv7": 13422,
+   "roboflow": 4569,
+   "vistas": 2226
+  }
+ },
+ "train_total": 235951,
+ "val_total": 27906,
+ "roboflow_projects": 20
+}

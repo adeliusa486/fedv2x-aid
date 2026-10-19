@@ -1,0 +1,84 @@
+# Hazard taxonomy of FedV2X-Aid (Phase 2, chunk 2.2). Fixed on 17 October 2026 before any learning run.
+#
+# Every one of the 152 detector classes of the merged set (dataset.yaml) belongs to exactly one group.
+# The six groups with `evaluated: true` are the hazard groups of the paper (R@P80 per group, mean over the six).
+# The other groups are kept in the model and in mAP50 over all classes, but are not hazard groups of the
+# evaluation; `reason` says why. Class names must match dataset.yaml exactly (checked by tests/test_taxonomy.py).
+#
+# Teacher scopes (the class sets C_s of the source-scoped loss, Eq. (local) of the paper):
+#   v2x_cam:       classes whose objects broadcast CAM/BSM (ETSI station types passenger car, bus, light and
+#                  heavy truck, trailer, special vehicle, tram, motorcycle). Bicycles and riders do not send CAMs.
+#   range_dropoff: admissible classes of a drop-off event of the downward range sensor (set-valued label).
+#   range_obstacle: admissible classes of a protrusion event of the forward range sensor (set-valued label).
+version: 1
+groups:
+  vehicle:
+    evaluated: true
+    classes: [car, bus, truck, van, taxi, ambulance, motorcycle, bicycle, train, golf cart, trailer]
+    reason: Moving or parked road vehicles; collisions at crossings are the most severe hazard.
+  person:
+    evaluated: true
+    classes: [person, child, cyclist, motorcyclist]
+    reason: Pedestrians and riders; collision and guidance relevance.
+  curb:
+    evaluated: true
+    classes: [curb]
+    reason: Vertical drop or step at the edge of the walkway; a fall hazard.
+  crosswalk:
+    evaluated: true
+    classes: [crosswalk]
+    reason: Marked crossing; where vehicle conflicts occur and where guidance is needed.
+  stairs:
+    evaluated: true
+    classes: [stairs]
+    reason: Fall hazard (up or down).
+  pothole:
+    evaluated: true
+    classes: [pothole, open hole]
+    reason: Holes in the walking surface (pothole, open excavation); trip and fall hazard.
+  obstacle:
+    evaluated: false
+    classes: [wheelchair, stroller, e-scooter, skateboard, shopping cart, street light, utility pole, pole, fire hydrant,
+              parking meter, bench, trash can, bike rack, mailbox, utility box, billboard, fountain, potted plant, barrel,
+              traffic cone, bollard, sidewalk sign, kiosk, barrier, fence, ladder, tent, sculpture, pillar, tree, palm tree,
+              plant]
+    reason: Static or slow obstacles on the walkway. Not a hazard group of the evaluation because the human labels of
+      the street-level sources cover different subsets of these 32 classes (poles in Vistas, bollards and pillars in
+      single Roboflow projects), so a pooled group recall would mix incomparable label definitions; they are scored per
+      class in mAP50.
+  sign_signal:
+    evaluated: false
+    classes: [traffic light, pedestrian signal, crosswalk button, stop sign, traffic sign, yield sign, do not enter sign,
+              one way sign, pedestrian crossing sign, speed limit sign, construction sign, sidewalk closed sign,
+              bus stop sign, exit sign, wet floor sign]
+    reason: Information for guidance, not physical hazards.
+  ground_feature:
+    evaluated: false
+    classes: [curb ramp, ramp, manhole, storm drain, sidewalk crack, speed bump, rail track, tactile paving, swimming pool,
+              escalator]
+    reason: Walking-surface features that are cues rather than the six hazards (ramps, covers, markings); swimming pool
+      and escalator are rare in the street-level sources (counts in docs/attested_classes.yaml).
+  animal:
+    evaluated: false
+    classes: [dog, cat, bird, horse, cow, sheep, goat, camel]
+    reason: Animals; relevant, but human labels come almost only from COCO and Open Images, not from street-level
+      sources.
+  building_indoor:
+    evaluated: false
+    classes: [door, door handle, window, building, elevator, atm]
+    reason: Building elements for indoor and entrance guidance.
+  object:
+    evaluated: false
+    classes: [backpack, handbag, suitcase, umbrella, bottle, cup, box, plastic bag, tire, ball, cell phone, glasses, book,
+              can, toy, chair, couch, bed, table, desk, coffee table, nightstand, chest of drawers, wardrobe, toilet, sink,
+              tv, laptop, refrigerator, microwave, oven, stove, washing machine, bathtub, shower, shelf, bookcase, stool,
+              mirror, curtain, cabinet, countertop, lamp, ceiling fan, pillow, clock, keyboard, mouse, remote, scissors,
+              knife, fork, spoon, bowl, plate, kettle, toothbrush, towel, banana, apple, orange]
+    reason: Personal and indoor objects for object finding, outside the street-hazard scope of this paper.
+teachers:
+  v2x_cam: [car, bus, truck, van, taxi, ambulance, motorcycle, train, trailer]
+  range_dropoff: [curb, stairs, pothole, open hole]
+  range_obstacle: [wheelchair, stroller, e-scooter, shopping cart, street light, utility pole, pole, fire hydrant,
+                   parking meter, bench, trash can, bike rack, mailbox, utility box, barrel, traffic cone, bollard,
+                   sidewalk sign, kiosk, barrier, fence, pillar, tree, palm tree, person, child, cyclist, car, bicycle]
+excluded: []

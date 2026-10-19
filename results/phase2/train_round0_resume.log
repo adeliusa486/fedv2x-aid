@@ -1,0 +1,784 @@
+New https://pypi.org/project/ultralytics/8.4.178 available  Update with 'pip install -U ultralytics'
+Ultralytics 8.4.155  Python-3.11.9 torch-2.5.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4060 Laptop GPU, 8188MiB)
+[34m[1mengine\trainer: [0magnostic_nms=False, amp=True, angle=1.0, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, channels_last=None, classes=None, close_mosaic=0, cls=0.5, cls_pw=0.0, cls_remap=True, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=E:\fedv2x_work\round0\data.yaml, degrees=0.0, deterministic=False, device=, dfl=1.5, dgrad=0.5, dis=6.0, distill_model=None, dlam=1.0, dlog=1.0, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=10, erasing=0.4, exist_ok=True, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=23, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=E:\fedv2x_work\round0\train\weights\last.pt, momentum=0.937, mosaic=0.0, multi_scale=0.0, name=train, nbs=64, nms=None, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=100, perspective=0.0, plots=False, pose=12.0, pretrained=True, profile=False, project=E:\fedv2x_work\round0, quantize=None, rect=False, resume=E:\fedv2x_work\round0\train\weights\last.pt, retina_masks=False, rle=1.0, save=True, save_conf=False, save_crop=False, save_dir=E:\fedv2x_work\round0\train, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=tracktrack.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.0, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=12, workspace=None
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       928  ultralytics.nn.modules.conv.Conv             [3, 32, 3, 2]                 
+  1                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  2                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]     
+  3                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+  4                  -1  1    103360  ultralytics.nn.modules.block.C3k2            [128, 256, 1, False, 0.25]    
+  5                  -1  1    590336  ultralytics.nn.modules.conv.Conv             [256, 256, 3, 2]              
+  6                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]           
+  7                  -1  1   1180672  ultralytics.nn.modules.conv.Conv             [256, 512, 3, 2]              
+  8                  -1  1   1380352  ultralytics.nn.modules.block.C3k2            [512, 512, 1, True]           
+  9                  -1  1    656896  ultralytics.nn.modules.block.SPPF            [512, 512, 5]                 
+ 10                  -1  1    990976  ultralytics.nn.modules.block.C2PSA           [512, 512, 1]                 
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 13                  -1  1    443776  ultralytics.nn.modules.block.C3k2            [768, 256, 1, False]          
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 16                  -1  1    127680  ultralytics.nn.modules.block.C3k2            [512, 128, 1, False]          
+ 17                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 19                  -1  1    345472  ultralytics.nn.modules.block.C3k2            [384, 256, 1, False]          
+ 20                  -1  1    590336  ultralytics.nn.modules.conv.Conv             [256, 256, 3, 2]              
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 22                  -1  1   1511424  ultralytics.nn.modules.block.C3k2            [768, 512, 1, True]           
+ 23        [16, 19, 22]  1    878232  ultralytics.nn.modules.head.Detect           [152, 16, None, [128, 256, 512]]
+YOLO11s summary: 181 layers, 9,486,616 parameters, 9,486,600 gradients, 22.0 GFLOPs
+
+Transferred 499/499 items from pretrained weights
+Freezing layer 'model.0.conv.weight'
+Freezing layer 'model.0.bn.weight'
+Freezing layer 'model.0.bn.bias'
+Freezing layer 'model.1.conv.weight'
+Freezing layer 'model.1.bn.weight'
+Freezing layer 'model.1.bn.bias'
+Freezing layer 'model.2.cv1.conv.weight'
+Freezing layer 'model.2.cv1.bn.weight'
+Freezing layer 'model.2.cv1.bn.bias'
+Freezing layer 'model.2.cv2.conv.weight'
+Freezing layer 'model.2.cv2.bn.weight'
+Freezing layer 'model.2.cv2.bn.bias'
+Freezing layer 'model.2.m.0.cv1.conv.weight'
+Freezing layer 'model.2.m.0.cv1.bn.weight'
+Freezing layer 'model.2.m.0.cv1.bn.bias'
+Freezing layer 'model.2.m.0.cv2.conv.weight'
+Freezing layer 'model.2.m.0.cv2.bn.weight'
+Freezing layer 'model.2.m.0.cv2.bn.bias'
+Freezing layer 'model.3.conv.weight'
+Freezing layer 'model.3.bn.weight'
+Freezing layer 'model.3.bn.bias'
+Freezing layer 'model.4.cv1.conv.weight'
+Freezing layer 'model.4.cv1.bn.weight'
+Freezing layer 'model.4.cv1.bn.bias'
+Freezing layer 'model.4.cv2.conv.weight'
+Freezing layer 'model.4.cv2.bn.weight'
+Freezing layer 'model.4.cv2.bn.bias'
+Freezing layer 'model.4.m.0.cv1.conv.weight'
+Freezing layer 'model.4.m.0.cv1.bn.weight'
+Freezing layer 'model.4.m.0.cv1.bn.bias'
+Freezing layer 'model.4.m.0.cv2.conv.weight'
+Freezing layer 'model.4.m.0.cv2.bn.weight'
+Freezing layer 'model.4.m.0.cv2.bn.bias'
+Freezing layer 'model.5.conv.weight'
+Freezing layer 'model.5.bn.weight'
+Freezing layer 'model.5.bn.bias'
+Freezing layer 'model.6.cv1.conv.weight'
+Freezing layer 'model.6.cv1.bn.weight'
+Freezing layer 'model.6.cv1.bn.bias'
+Freezing layer 'model.6.cv2.conv.weight'
+Freezing layer 'model.6.cv2.bn.weight'
+Freezing layer 'model.6.cv2.bn.bias'
+Freezing layer 'model.6.m.0.cv1.conv.weight'
+Freezing layer 'model.6.m.0.cv1.bn.weight'
+Freezing layer 'model.6.m.0.cv1.bn.bias'
+Freezing layer 'model.6.m.0.cv2.conv.weight'
+Freezing layer 'model.6.m.0.cv2.bn.weight'
+Freezing layer 'model.6.m.0.cv2.bn.bias'
+Freezing layer 'model.6.m.0.cv3.conv.weight'
+Freezing layer 'model.6.m.0.cv3.bn.weight'
+Freezing layer 'model.6.m.0.cv3.bn.bias'
+Freezing layer 'model.6.m.0.m.0.cv1.conv.weight'
+Freezing layer 'model.6.m.0.m.0.cv1.bn.weight'
+Freezing layer 'model.6.m.0.m.0.cv1.bn.bias'
+Freezing layer 'model.6.m.0.m.0.cv2.conv.weight'
+Freezing layer 'model.6.m.0.m.0.cv2.bn.weight'
+Freezing layer 'model.6.m.0.m.0.cv2.bn.bias'
+Freezing layer 'model.6.m.0.m.1.cv1.conv.weight'
+Freezing layer 'model.6.m.0.m.1.cv1.bn.weight'
+Freezing layer 'model.6.m.0.m.1.cv1.bn.bias'
+Freezing layer 'model.6.m.0.m.1.cv2.conv.weight'
+Freezing layer 'model.6.m.0.m.1.cv2.bn.weight'
+Freezing layer 'model.6.m.0.m.1.cv2.bn.bias'
+Freezing layer 'model.7.conv.weight'
+Freezing layer 'model.7.bn.weight'
+Freezing layer 'model.7.bn.bias'
+Freezing layer 'model.8.cv1.conv.weight'
+Freezing layer 'model.8.cv1.bn.weight'
+Freezing layer 'model.8.cv1.bn.bias'
+Freezing layer 'model.8.cv2.conv.weight'
+Freezing layer 'model.8.cv2.bn.weight'
+Freezing layer 'model.8.cv2.bn.bias'
+Freezing layer 'model.8.m.0.cv1.conv.weight'
+Freezing layer 'model.8.m.0.cv1.bn.weight'
+Freezing layer 'model.8.m.0.cv1.bn.bias'
+Freezing layer 'model.8.m.0.cv2.conv.weight'
+Freezing layer 'model.8.m.0.cv2.bn.weight'
+Freezing layer 'model.8.m.0.cv2.bn.bias'
+Freezing layer 'model.8.m.0.cv3.conv.weight'
+Freezing layer 'model.8.m.0.cv3.bn.weight'
+Freezing layer 'model.8.m.0.cv3.bn.bias'
+Freezing layer 'model.8.m.0.m.0.cv1.conv.weight'
+Freezing layer 'model.8.m.0.m.0.cv1.bn.weight'
+Freezing layer 'model.8.m.0.m.0.cv1.bn.bias'
+Freezing layer 'model.8.m.0.m.0.cv2.conv.weight'
+Freezing layer 'model.8.m.0.m.0.cv2.bn.weight'
+Freezing layer 'model.8.m.0.m.0.cv2.bn.bias'
+Freezing layer 'model.8.m.0.m.1.cv1.conv.weight'
+Freezing layer 'model.8.m.0.m.1.cv1.bn.weight'
+Freezing layer 'model.8.m.0.m.1.cv1.bn.bias'
+Freezing layer 'model.8.m.0.m.1.cv2.conv.weight'
+Freezing layer 'model.8.m.0.m.1.cv2.bn.weight'
+Freezing layer 'model.8.m.0.m.1.cv2.bn.bias'
+Freezing layer 'model.9.cv1.conv.weight'
+Freezing layer 'model.9.cv1.bn.weight'
+Freezing layer 'model.9.cv1.bn.bias'
+Freezing layer 'model.9.cv2.conv.weight'
+Freezing layer 'model.9.cv2.bn.weight'
+Freezing layer 'model.9.cv2.bn.bias'
+Freezing layer 'model.10.cv1.conv.weight'
+Freezing layer 'model.10.cv1.bn.weight'
+Freezing layer 'model.10.cv1.bn.bias'
+Freezing layer 'model.10.cv2.conv.weight'
+Freezing layer 'model.10.cv2.bn.weight'
+Freezing layer 'model.10.cv2.bn.bias'
+Freezing layer 'model.10.m.0.attn.qkv.conv.weight'
+Freezing layer 'model.10.m.0.attn.qkv.bn.weight'
+Freezing layer 'model.10.m.0.attn.qkv.bn.bias'
+Freezing layer 'model.10.m.0.attn.proj.conv.weight'
+Freezing layer 'model.10.m.0.attn.proj.bn.weight'
+Freezing layer 'model.10.m.0.attn.proj.bn.bias'
+Freezing layer 'model.10.m.0.attn.pe.conv.weight'
+Freezing layer 'model.10.m.0.attn.pe.bn.weight'
+Freezing layer 'model.10.m.0.attn.pe.bn.bias'
+Freezing layer 'model.10.m.0.ffn.0.conv.weight'
+Freezing layer 'model.10.m.0.ffn.0.bn.weight'
+Freezing layer 'model.10.m.0.ffn.0.bn.bias'
+Freezing layer 'model.10.m.0.ffn.1.conv.weight'
+Freezing layer 'model.10.m.0.ffn.1.bn.weight'
+Freezing layer 'model.10.m.0.ffn.1.bn.bias'
+Freezing layer 'model.13.cv1.conv.weight'
+Freezing layer 'model.13.cv1.bn.weight'
+Freezing layer 'model.13.cv1.bn.bias'
+Freezing layer 'model.13.cv2.conv.weight'
+Freezing layer 'model.13.cv2.bn.weight'
+Freezing layer 'model.13.cv2.bn.bias'
+Freezing layer 'model.13.m.0.cv1.conv.weight'
+Freezing layer 'model.13.m.0.cv1.bn.weight'
+Freezing layer 'model.13.m.0.cv1.bn.bias'
+Freezing layer 'model.13.m.0.cv2.conv.weight'
+Freezing layer 'model.13.m.0.cv2.bn.weight'
+Freezing layer 'model.13.m.0.cv2.bn.bias'
+Freezing layer 'model.16.cv1.conv.weight'
+Freezing layer 'model.16.cv1.bn.weight'
+Freezing layer 'model.16.cv1.bn.bias'
+Freezing layer 'model.16.cv2.conv.weight'
+Freezing layer 'model.16.cv2.bn.weight'
+Freezing layer 'model.16.cv2.bn.bias'
+Freezing layer 'model.16.m.0.cv1.conv.weight'
+Freezing layer 'model.16.m.0.cv1.bn.weight'
+Freezing layer 'model.16.m.0.cv1.bn.bias'
+Freezing layer 'model.16.m.0.cv2.conv.weight'
+Freezing layer 'model.16.m.0.cv2.bn.weight'
+Freezing layer 'model.16.m.0.cv2.bn.bias'
+Freezing layer 'model.17.conv.weight'
+Freezing layer 'model.17.bn.weight'
+Freezing layer 'model.17.bn.bias'
+Freezing layer 'model.19.cv1.conv.weight'
+Freezing layer 'model.19.cv1.bn.weight'
+Freezing layer 'model.19.cv1.bn.bias'
+Freezing layer 'model.19.cv2.conv.weight'
+Freezing layer 'model.19.cv2.bn.weight'
+Freezing layer 'model.19.cv2.bn.bias'
+Freezing layer 'model.19.m.0.cv1.conv.weight'
+Freezing layer 'model.19.m.0.cv1.bn.weight'
+Freezing layer 'model.19.m.0.cv1.bn.bias'
+Freezing layer 'model.19.m.0.cv2.conv.weight'
+Freezing layer 'model.19.m.0.cv2.bn.weight'
+Freezing layer 'model.19.m.0.cv2.bn.bias'
+Freezing layer 'model.20.conv.weight'
+Freezing layer 'model.20.bn.weight'
+Freezing layer 'model.20.bn.bias'
+Freezing layer 'model.22.cv1.conv.weight'
+Freezing layer 'model.22.cv1.bn.weight'
+Freezing layer 'model.22.cv1.bn.bias'
+Freezing layer 'model.22.cv2.conv.weight'
+Freezing layer 'model.22.cv2.bn.weight'
+Freezing layer 'model.22.cv2.bn.bias'
+Freezing layer 'model.22.m.0.cv1.conv.weight'
+Freezing layer 'model.22.m.0.cv1.bn.weight'
+Freezing layer 'model.22.m.0.cv1.bn.bias'
+Freezing layer 'model.22.m.0.cv2.conv.weight'
+Freezing layer 'model.22.m.0.cv2.bn.weight'
+Freezing layer 'model.22.m.0.cv2.bn.bias'
+Freezing layer 'model.22.m.0.cv3.conv.weight'
+Freezing layer 'model.22.m.0.cv3.bn.weight'
+Freezing layer 'model.22.m.0.cv3.bn.bias'
+Freezing layer 'model.22.m.0.m.0.cv1.conv.weight'
+Freezing layer 'model.22.m.0.m.0.cv1.bn.weight'
+Freezing layer 'model.22.m.0.m.0.cv1.bn.bias'
+Freezing layer 'model.22.m.0.m.0.cv2.conv.weight'
+Freezing layer 'model.22.m.0.m.0.cv2.bn.weight'
+Freezing layer 'model.22.m.0.m.0.cv2.bn.bias'
+Freezing layer 'model.22.m.0.m.1.cv1.conv.weight'
+Freezing layer 'model.22.m.0.m.1.cv1.bn.weight'
+Freezing layer 'model.22.m.0.m.1.cv1.bn.bias'
+Freezing layer 'model.22.m.0.m.1.cv2.conv.weight'
+Freezing layer 'model.22.m.0.m.1.cv2.bn.weight'
+Freezing layer 'model.22.m.0.m.1.cv2.bn.bias'
+Freezing layer 'model.23.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed 
+WARNING [34m[1mtrain: [0mSlow image access detected (ping: 0.60.2 ms, read: 22.427.5 MB/s, size: 101.4 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips
+[K[34m[1mtrain: [0mScanning E:\fedv2x_work\round0_data\labels\train.cache... 58000 images, 5049 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 58000/58000  0.0s
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__00031197fb7b015d.jpg: 40 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__000fea75ed43e923.jpg: 17 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__002a860e50cd3172.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__003f5bd56af31e2e.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0048f823070ca429.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__00659d7f965d257c.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0087d0c3ef7b76b4.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__00d7c71d753b9062.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__00f3150ad00889f7.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0111062f4caf0590.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0162261a4cd5dd7f.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__01629ab4e5f0d759.jpg: 13 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__01927c799104af8e.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__01975040a9a8e35f.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__01fb725fb1aa7b04.jpg: 21 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__02336ad2ee4bb392.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__025848d98ae29525.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__026e1a15f466019d.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__029b8ee82a3d839d.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__02aace18215875e8.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__02c94cd095f74b11.jpg: 79 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__03578766d9e7b703.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__03ddb718f56fdf54.jpg: 17 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__04750a0fda946daa.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__047ae366b392f7be.jpg: 20 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__05e3e401499d0247.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__060017a6a0e922d2.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0687d512e9a7aef3.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__06f10308c16a38ae.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__08f074bf81b86b3b.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__09059eaa27c5192a.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__094c86ebdd2394d2.jpg: 34 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0af2b6da9b529ccb.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0b06ffc5939d78d7.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0b6210a2b647855b.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0c7b89f1bae6ffae.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0d488671c3197412.jpg: 18 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0d6bd146c5a29787.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0df75ace132953e4.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0e1e80fe0188a0ab.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0e2b7947ad9521af.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0e57e4f3fe5bb978.jpg: 52 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0f196a566a9d1301.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0f31e1078b86c729.jpg: 19 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0f43f45d04e6844c.jpg: 19 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0f4eae57dae5bec8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0f631d29766956d0.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0f646a27a46740ba.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__0f6f1ae4f4a5bffd.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1060cfd671be733f.jpg: 13 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__11271a514bdf08bb.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__13a019aa27f4d45e.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__13f52496d380db89.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__140f76fe7e734683.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__14816357b38693f1.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__156e07a3fd6ee7bb.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__15ea9e8597f86560.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__15ef7b90ba933fd4.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1620112affb8b068.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__16c5592293354abd.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__16cdaef661d495ea.jpg: 74 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__185b8a93775a3618.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__19b749c1be63c164.jpg: 14 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1a4a7dfe1b4c07ef.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1a89d774017a3617.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1aab7cab1a1dd5ae.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1b0bb13d8c90a600.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1b9d431426a41bfc.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1bde133e6538e731.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1d46743e5fb9b1f4.jpg: 26 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1da1f7a7690c45bb.jpg: 30 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1dbe94195ba8cd16.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1dd6430e4d3f5c0a.jpg: 15 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1eac0f1880d92ef3.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1efce09f586f6f1e.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1f2eeab992ebbb80.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1f64fc64f6c08e77.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__1f9f85e09852035e.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__203cd0a500bdb6d8.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__217950f419588566.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__218b938c88cd16cb.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__221faa23065d2a70.jpg: 72 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__225924719c01c117.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__22be04dc6eb05475.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__22fc1e032673f426.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__2314adca4c796cbc.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__235736b287e5558b.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__23b117ca80de0502.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__23b20a44abf1eba1.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__23f41c344284daf2.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__247c36932f456ce2.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__249414be0aa16a48.jpg: 18 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__250763031b938f54.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__2536654a0cf74068.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__263523d1754e3381.jpg: 33 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__27627c2cf9d56cb4.jpg: 13 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__277c79c17a5b1dc7.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__28e6130f3cdb9470.jpg: 13 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__28f8d8ad17554e10.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__292d5d47840397a7.jpg: 46 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__297fd055fb9cf76b.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__29fe05c87481aa47.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__2abd20e28e263b25.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__2ada8c5a68fc9e57.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__2b0a617f8574df0c.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__2b1aec55a62db658.jpg: 116 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__2d4a20a9d9eaea93.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__2e80ce5fe50a9d00.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__2fdbbb7b5fc955fe.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__30300ca3f17ffa95.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__30f2fae419a4f2c3.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__30f98d3e57bb60ea.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__30fbf2518731d296.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__311d4956f723d81c.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3243dd089e45a890.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__32511b75b13bf97d.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__32638e936f8283b6.jpg: 30 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__32dc8ad4ff55d1a3.jpg: 33 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3498eec9329d7f36.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__358a9e82bfccc5b0.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3674f42004e2ff88.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__368e1670c4de9c1d.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__370147f5e123a17c.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3782aa4d8c478fe8.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__380e92326e7f20a5.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__384af20f19664e37.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3867a43bb5f81650.jpg: 85 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__38c160bbad9fe8ae.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__39311d43a023ceca.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3a005d158e977b69.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3a140d964ab03d11.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3a905efdb39502dc.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3b81c40deeb69961.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3c0539db84252fbe.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3c3ef0104d467e04.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3d21ebdcd1fbac81.jpg: 40 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3d5b45b810748999.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3f01db1089b03b60.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__3ff5ed69a1fd02e5.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__402ea5dfec84827e.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__40620a342e60502a.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__40a054765279dc0e.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4113bd482f4d420c.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__414e028439f23601.jpg: 21 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__417210c9dc94ec06.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__42519bde941cc00d.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4365ab64c4513b67.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__43f424521c2d7d81.jpg: 15 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__446000cf5c6d5a15.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__45218662d87cb99f.jpg: 13 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__455d9063ae28f547.jpg: 20 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__46eacf5938341986.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__47ac688847be1ba6.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__47be6a05b7a5f87e.jpg: 54 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__48cd8dc3477a051c.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__49210be47519694f.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4959b7c9afc20cd4.jpg: 66 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4a03e789e57b52bb.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4a7c192b9f6ebdd2.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4a835688ac5f6586.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4ad851afd13dc5c8.jpg: 30 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4c27d574c04b4ca5.jpg: 21 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4c483dbac83e2b0e.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4c5e006d318ee068.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4d73c7a79863c330.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4f09302b172b0a38.jpg: 45 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4f114d2e1cc84785.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4fe5eb75d5a1430f.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4fed560f6ca56212.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__4ff6d17cccf56fe8.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5007bf899a974a5f.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__50777de42bc1e490.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5173cd94746fcb0f.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__51978b3f5168040f.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__52251b62ee03ddfd.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5230bb690372901a.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5276c5c99d3a7a8e.jpg: 14 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5296f6aba2c5d166.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__529c60dca73b22a4.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__533222f7844e75e7.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__534a36a2cbd231c2.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__549c0b7dd44edc10.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__54fa26d071d8af01.jpg: 70 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__55aca23475244e37.jpg: 39 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5699607f93c0916a.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__570d17bc1b05c246.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__57448838f96c45bb.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__584569b93021d416.jpg: 30 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__58e5b88aa02baf31.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__58eb2de40eae5d1d.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__58fd816052d64ec5.jpg: 14 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5911fd31f3b626e2.jpg: 43 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5c6a79e426204b6e.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5ce0565b1c60e65a.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5d3a334274339e15.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5da24dc81045c63b.jpg: 24 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5fd1bff48439da78.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__5fe9c389c1be3d5f.jpg: 52 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__6041fd3c6306de3e.jpg: 18 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__61ec5c673081641a.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__6273b0b941c6cd52.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__62c3cd28116ad86c.jpg: 15 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__62dc311c01672f01.jpg: 24 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__63ab6e21e78dc2ac.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__63fc74d7b71dfe4a.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__642167605fc38f3e.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__644bdc16688d14ee.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__64a4c6886d38112e.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__64df90a95f7edf38.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__65435a13b9ac09de.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__655dc79da658819b.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__66695d7a80356472.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__674aead4396aa2c6.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__67c4048442a624fa.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__68bab78d24f9c61b.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__68da3fdca5cb730b.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__68dbbd4cb533daee.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__68fc30f1ecf0183d.jpg: 20 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__6978c90f4baf1941.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__6a9b54e291de06f8.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__6af282a0aa94e7d2.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__6c16a6255e18ee13.jpg: 28 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__6cef4b79f59c4bf8.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__6d348f9c815e2099.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__6dee73e35c33b613.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__6e100e54e3e30ea0.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__6f1dac89dc864877.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__70a3a559a50fe0ba.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__70b48f6cd2605f4e.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__71c3f2d2dd9d07a7.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__72b2e3b8489de084.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__737d261d3bbef844.jpg: 32 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__739b4f48eb203b7a.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__73c72349b55aae29.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__750ae6a30cfd0042.jpg: 17 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__755746a7963a11e6.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__7704f6da4e25910c.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__771efed0eb7caaac.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__780a4c3e802dff9b.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__781212af3e06b2a8.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__782b758748cf5e0c.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__78375e52e8621cc5.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__7869592e3d302c14.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__7882d1e330b37f40.jpg: 14 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__78d418ca6d35157d.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__7915f2085c02b442.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__7a1506da7031b6ca.jpg: 13 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__7aa6ce3ebb05f101.jpg: 21 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__7bcfd8f500843aa1.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__7c0633076dc156bb.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__7cdd69f8258548de.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__7e2e5a42396c3bd5.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__7e56b32d6e296d1a.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__7f8e606b498a3af9.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__803f6f063883e513.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__82f03a4c64d1b387.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__83fb1049079e9439.jpg: 14 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__85cc0864b027a994.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__863e8ebc39affd45.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__8650f0fe62770947.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__867fbbebb6e93498.jpg: 20 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__86f5392094dba428.jpg: 40 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__886ad93226d4c1aa.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__896b2c7291b39a59.jpg: 26 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__89901b64bbce74fa.jpg: 29 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__8a0a0e5775ec55d6.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__8acce74a0c0422e9.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__8c9eb8b3fa1c68af.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__8d13b80f676541c8.jpg: 24 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__8d1576fb097be349.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__8d6bbd394842f586.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__914e1e4cff9c7001.jpg: 98 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__91f7f54bbfee37f7.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__930001246276fae3.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__9330de91b9410580.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__933f6dc16a6ff2e4.jpg: 35 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__93561ba5d4577301.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__948d29f224675b4f.jpg: 34 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__94e75b90b43a9fe2.jpg: 93 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__94f6138a0696a9e1.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__954e891e25c0ab76.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__95eb156b7e279761.jpg: 26 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__9689384e6be6b968.jpg: 70 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__96fff31ba9a66c54.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__9740d70bce6fa670.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__98f541a8b852deae.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__9a136a0e689271ac.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__9a1ceab143527501.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__9d04350f2a910b80.jpg: 38 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__9d7ba68734de6036.jpg: 15 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__9f430c2d95b2c4ef.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a00423d3668cf454.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a11c68ad0181c888.jpg: 24 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a1c19596a48881d4.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a2bf571059f09e78.jpg: 14 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a31ff8d231fa42f8.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a38c7ac9cfcab4f1.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a40268a925b481f8.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a488654fa40145b0.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a4c9d7abd1c94930.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a691a65925923d68.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a7a10383436c6672.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a8b464e0cd841131.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a945f0273191fc0a.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a9714c62b633be44.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a9b8c24c5601f91e.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__a9ce50d21ef39366.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__aa1beeadf83276b1.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__aa5b851342642615.jpg: 24 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__aace2107a8d0fe7b.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ab0e9d19e8b91a0b.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__aba6dc2056e44ac8.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ac2e6cb990bb0571.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ad014a24fefb1121.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ad24f8a010edb951.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ada8959937c75a35.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ae85837eb44959b6.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__af8a0b9c23fbb738.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__afb7c1850d0a148e.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__aff1d0ceeda49bbb.jpg: 23 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b06dff5f398ae167.jpg: 52 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b0adce2edf66e4a8.jpg: 31 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b0cc6b21dd33355a.jpg: 13 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b0dc031bc507eed5.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b18bd829380942e0.jpg: 18 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b2c5357c848c1086.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b35032581cc10510.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b4d8af0a8afe1b35.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b4da56e218b2f1f9.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b522cd2d2c2a9344.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b6133bc44a3bab04.jpg: 29 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b61ebae47c831533.jpg: 27 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b640ab5882bd952c.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b6f1bab000e2f276.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b760600645a6fbbb.jpg: 20 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__b8d0f876176412b5.jpg: 22 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ba32c24a62b1fd44.jpg: 15 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ba4f7c1d589a1454.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__bb3c3287e149be8d.jpg: 14 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__bbd4c80373f65cdd.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__bc02501289625848.jpg: 26 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__bc52f549d9e882f4.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__bc6605286a0a40b6.jpg: 14 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__bdbd66a4fb7194d2.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__bde94288c637e18d.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__bee74b348ad10977.jpg: 20 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c06dcfa09f009f97.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c0d976e7cb44b638.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c0e6f08cac6303b5.jpg: 13 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c11aee814fc5204e.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c1d151056210c378.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c202ae619deb1b1e.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c260147586c12bbe.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c27d075cfe76f020.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c3124a8737b08f88.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c3ab9de02ed5a636.jpg: 24 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c3c6308685e68c68.jpg: 14 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c3c96f4eaaeeadf9.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c51558bc995218fe.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c585a49a97f75745.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c64be8fa065cccd6.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c734b1dd169147de.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c73967bf7bd357bf.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c8037a3dc158d1de.jpg: 13 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c8250e7a4dc1d7b8.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c8802be6dfb11501.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c92fa1cd2f6252b1.jpg: 22 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__c9be4f1f37f95915.jpg: 19 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ca7472a2af94f03e.jpg: 24 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ca99b75f3f7e702a.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__cbf56b3412b9fec8.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__cc6908ec5399377e.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__cc70ce55e18fcb36.jpg: 13 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ccc1409511fe43be.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__cd71d6062c03fcb7.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__cd975a50e82fe6b4.jpg: 20 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__cdb98ba893e15928.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__cdfd2e34aa552bd9.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__cf167eef202c07e0.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__cf745b2c1f432226.jpg: 30 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d0551884dddddb0b.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d08dbc3bce047639.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d09257a56af41753.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d159de9113f53ad8.jpg: 50 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d254930edd91d35d.jpg: 14 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d33897e9b6e7fc3c.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d41c5fc6eaeb9796.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d50abf2154b5b135.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d611646f5f8b0817.jpg: 54 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d6c15a979a8c4b72.jpg: 21 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d70ae5ade9b99630.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d714c7cb9e7bbe6a.jpg: 18 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d85848aa10c40be1.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d85bc5978132ba90.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d8a512e3117630a8.jpg: 34 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d94a51915b3eab38.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__d96ff203f07ae374.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__da2ae3e31e4a663f.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__da781530642406a1.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__da9ee35ca4faba6e.jpg: 33 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__dacb647a49a49931.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__daf282103b31de93.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__db7ebad1752ae1cb.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__dccccd7b86d9fc48.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__dd727925e159c74b.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__de535c86e2238a4e.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__deb17965056f5045.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__decd01b4e0fa98f5.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e0ee43db736fa6b3.jpg: 28 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e17196d3ef21e3fd.jpg: 108 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e1d24bbb752a02f6.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e1df43cd8b054ae2.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e235f9a6bcb9c02d.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e39246ffae455919.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e40751877aac2cf2.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e426b300d080ab80.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e5debbc416121b25.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e65d430d1b4ae07a.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e684d63552115473.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e9436fb4bf6437fb.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__e999fd30c6c88904.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ea05333f417ef12f.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ea1222b992229fc1.jpg: 64 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ea873cda23854ea9.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__eaf7825bffec3b73.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__eb590360db1cf0db.jpg: 5 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__eb8af4194d2a59fc.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ec0a58f3c6f957e4.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ec17624465fbaba5.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ec599875581359e8.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__edb5473ff599facd.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ee442d594c3a3998.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__eec5af17f7df27d9.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ef2ebc1356d51e1f.jpg: 21 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__ef562e1eea089278.jpg: 30 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f11e139be2bb4c6a.jpg: 15 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f1d32749ae508179.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f29f68cdce9b3ae6.jpg: 23 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f2c2f07dea5664c8.jpg: 12 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f4442733ee9fcff6.jpg: 24 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f47bf1bfe4f4e379.jpg: 17 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f49422c8e7f0f66b.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f4d05b56dc03c1ce.jpg: 22 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f597cf51f2038e48.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f74969e95cfe1569.jpg: 15 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f829116394cfa67b.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f83bcf9a9c381d4b.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__f9affacbaeda8d02.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__fa1d5563d6c061de.jpg: 13 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__faf438d74adb5f24.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__train__fd872ed19d92fb41.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__05f0c24e9138392c.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__063842dba3fcd6e1.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__154bb12ff0554141.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__1945f91b6f5311ed.jpg: 18 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__1b8500e0e4938e77.jpg: 52 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__1c2e30c09af6a2f4.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__1eb99df4147f898f.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__204ddb40982865e6.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__2e2b5134e2d108f3.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__383f4d01a43c5b71.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__3ba1c115542c0e4d.jpg: 17 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__3c767358c20b8920.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__3deeb62b22d8cb83.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__3ed000628c6a0587.jpg: 15 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__408bfc9875660552.jpg: 14 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__409f7b5ca2a458c6.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__438233e194a66329.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__499ec935f85024a3.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__5498ead4b3d9952b.jpg: 10 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__554e2ce74443f55b.jpg: 48 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__558522895b74100d.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__668233ba2eb61801.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__7a87225ae9d63bcd.jpg: 27 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__8432dd3a078f6a44.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__87b1fa47c3ed5a92.jpg: 16 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__892a2da672365b31.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__96b4003facffe2bf.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__97c410a18e4b09ae.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__a54eabadd45ef320.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__a892701b4d5ee1cc.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__a9371dcd7d3087d9.jpg: 7 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__acd8371d50566145.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__b10730442db3217a.jpg: 15 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__b31c7d3a91c084a2.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__b99b937045f71075.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__bf66f91af557ad59.jpg: 22 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__c0118f1c1e02647e.jpg: 24 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__c16781b6b6a0732f.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__c303018870af47b9.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__cfc8de08c5e7f7a2.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__e1ffa13fb120c12b.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__e65d672de1e72fcb.jpg: 3 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__e6d27669b2efb650.jpg: 14 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__eccb080e57b2aac5.jpg: 20 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7__val__f1a028e8a3f14b47.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7x__train__01cdc79c3180207d.jpg: 4 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7x__train__044b8f6bf440e9d7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7x__train__125d235d83486a2c.jpg: 8 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7x__train__136b8f572ec76a05.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7x__train__1449bb895a076efb.jpg: 15 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7x__train__1d9588a8ab66c16e.jpg: 9 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7x__train__2fd88be395fd8204.jpg: 11 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7x__train__d4c2172f7f742d60.jpg: 6 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\oiv7x__train__f3e6461d8b37ef65.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\rf_sideguide__train__MP_SEL_001512_jpg.rf.46f2ed3f6ba031d60fd14a8492c418ab.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\vistas__train__3eodkoH2NtePTDEpraGktg.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\vistas__train__5bIpd4WMBxjsghc4FN8I_A.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\vistas__train__EnSITkukhw4EZu597keJsg.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\vistas__train__IEkYO1LWyPvgeHd8j-QwCg.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\vistas__train__LHBy8yFancrKKP5-VEjgIw.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\vistas__train__NRbsi8SFBqhYIH1SmbLWfw.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\vistas__train__NRdx3CG9X6tm3h-5aTcnPg.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\vistas__train__aJTkwO3UXVkNnwmre6gtog.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\vistas__train__kWzQtMGDSOkZ970ATcxKLw.jpg: 2 duplicate labels removed
+[34m[1mtrain: [0mE:\fedv2x_work\round0_data\images\train\vistas__train__nw1edyLQ6zuthI2WB5KD8Q.jpg: 1 duplicate labels removed
+WARNING [34m[1mval: [0mSlow image access detected (ping: 0.90.2 ms, read: 1.91.5 MB/s, size: 116.1 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips
+[K[34m[1mval: [0mScanning E:\fedv2x_work\round0_data\labels\val.cache... 2000 images, 159 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 2000/2000  0.0s
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__train__04e8396dbf6c2995.jpg: 16 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__train__060f252b06c1a33a.jpg: 6 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__train__0b66e2351faf4b73.jpg: 8 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__train__1226a6d860bf667e.jpg: 5 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__train__45cfc4b2951f155e.jpg: 3 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__train__4ed8cfc4b54a9a6f.jpg: 21 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__train__92fbbf2cee9c3637.jpg: 7 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__train__a3c3032d006fdaed.jpg: 21 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__train__bfde2fbd86fe6871.jpg: 7 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__train__c14281314baff26c.jpg: 12 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__train__ef80746cb3a364a5.jpg: 18 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__train__fbf47c0c3504e2f8.jpg: 4 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7__val__be445decf3070749.jpg: 20 duplicate labels removed
+[34m[1mval: [0mE:\fedv2x_work\round0_data\images\val\oiv7x__train__254e4d2f33145025.jpg: 4 duplicate labels removed
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+[34m[1moptimizer:[0m AdamW(lr=6.4e-05, momentum=0.9) with parameter groups 81 weight(decay=0.0), 88 weight(decay=0.0005), 87 bias(decay=0.0)
+Resuming training E:\fedv2x_work\round0\train\weights\last.pt from epoch 2 to 10 total epochs
+Using 58000 train, 2000 val images for fraction=1.0 at imgsz=640
+Using 12 dataloader workers
+Logging results to [1mE:\fedv2x_work\round0\train[0m
+Starting training for 10 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       2/10      2.88G      1.396      1.869      1.313        307        640: 0% ──────────── 0/1813  5.6s[K       2/10      3.19G      1.195      1.866       1.27        178        640: 0% ──────────── 1/1813 1.3s/it 6.0s<40:45[K       2/10      3.19G      1.282      1.885      1.285        250        640: 0% ──────────── 2/1813 1.2it/s 6.4s<25:05[K       2/10      3.19G      1.208      1.826      1.251        166        640: 0% ──────────── 3/1813 1.6it/s 6.8s<18:24[K       2/10      3.19G      1.242      1.902      1.269        225        640: 0% ──────────── 4/1813 2.1it/s 7.1s<14:05[K       2/10      3.19G      1.224       1.88      1.259        225        640: 0% ──────────── 5/1813 2.5it/s 7.4s<12:09[K       2/10      3.19G       1.26      1.911       1.27        347        640: 0% ──────────── 6/1813 2.6it/s 7.8s<11:45[K       2/10      3.19G      1.268      1.904      1.279        228        640: 0% ──────────── 7/1813 2.9it/s 8.0s<10:16[K       2/10      3.19G      1.264      1.905      1.279        182        640: 0% ──────────── 8/1813 3.3it/s 8.3s<9:03[K       2/10      3.19G      1.212      1.852      1.257        132        640: 0% ──────────── 9/1813 3.0it/s 8.7s<9:58[K       2/10      3.19G      1.215      1.854      1.253        218        640: 0% ──────────── 10/1813 2.8it/s 9.2s<10:51[K       2/10      3.19G      1.203      1.838      1.245        197        640: 0% ──────────── 11/1813 2.5it/s 9.7s<11:48[K       2/10      3.19G      1.198      1.839      1.235        261        640: 0% ──────────── 12/1813 2.1it/s 10.5s<14:05[K       2/10      3.19G      1.188      1.828      1.234        189        640: 0% ──────────── 13/1813 1.8it/s 11.7s<17:07[K       2/10      3.19G      1.161      1.837      1.231         91        640: 0% ──────────── 14/1813 1.6it/s 12.5s<18:47[K       2/10      3.19G      1.173       1.85      1.233        337        640: 0% ──────────── 15/1813 1.4it/s 13.6s<21:45[K       2/10      3.19G      1.179      1.849      1.234        209        640: 0% ──────────── 16/1813 1.3it/s 14.4s<22:12[K       2/10      3.19G      1.166      1.821      1.223        180        640: 0% ──────────── 17/1813 1.4it/s 15.1s<21:38[K       2/10      3.19G      1.168       1.83      1.226        172        640: 0% ──────────── 18/1813 1.3it/s 16.1s<23:37[K       2/10      3.19G       1.19      1.847      1.231        261        640: 1% ──────────── 19/1813 1.4it/s 16.6s<20:38[K       2/10      3.19G      1.179      1.832      1.228        163        640: 1% ──────────── 20/1813 1.4it/s 17.4s<21:24[K       2/10      3.19G      1.183      1.858      1.234        128        640: 1% ──────────── 21/1813 1.4it/s 18.2s<22:02[K       2/10      3.19G      1.188      1.853      1.237        279        640: 1% ──────────── 22/1813 1.4it/s 18.9s<21:15[K       2/10      3.19G      1.191      1.853      1.236        205        640: 1% ──────────── 23/1813 1.9it/s 19.2s<15:43[K       2/10      3.19G       1.19      1.855      1.238        181        640: 1% ──────────── 24/1813 2.1it/s 19.6s<14:13[K       2/10      3.19G      1.193      1.861      1.239        240        640: 1% ──────────── 25/1813 2.0it/s 20.1s<14:36[K       2/10      3.19G      1.195      1.858       1.24        189        640: 1% ──────────── 26/1813 2.2it/s 20.5s<13:34[K       2/10      3.19G      1.191      1.853      1.239        156        640: 1% ──────────── 27/1813 2.3it/s 20.9s<13:02[K       2/10      3.19G      1.191      1.863      1.241        133        640: 1% ──────────── 28/1813 2.3it/s 21.3s<12:49[K       2/10      3.19G      1.193      1.864       1.24        219        640: 1% ──────────── 29/1813 2.1it/s 21.9s<14:08[K       2/10      3.19G      1.191      1.865       1.24        208        640: 1% ──────────── 30/1813 2.1it/s 22.4s<13:58[K       2/10      3.19G      1.193      1.867      1.239        256        640: 1% ──────────── 31/1813 2.2it/s 22.8s<13:27[K       2/10      3.19G      1.191      1.859      1.238        200        640: 1% ──────────── 32/1813 2.2it/s 23.3s<13:45[K       2/10      3.19G      1.198      1.864      1.242        266        640: 1% ──────────── 33/1813 1.7it/s 25.0s<17:33[K       2/10      3.19G        1.2      1.868      1.242        221        640: 1% ──────────── 34/1813 1.7it/s 25.6s<17:31[K       2/10      3.19G        1.2      1.868      1.241        209        640: 1% ──────────── 35/1813 1.6it/s 26.3s<18:33[K       2/10      3.19G      1.198      1.872       1.24        107        640: 1% ──────────── 36/1813 1.4it/s 27.5s<21:38[K       2/10      3.19G      1.194      1.876      1.239        128        640: 2% ──────────── 37/1813 1.4it/s 28.1s<20:42Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\queues.py", line 244, in _feed
+    obj = _ForkingPickler.dumps(obj)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+  File "<work>\fedv2x-aid\.venv-gpu\Lib\site-packages\torch\multiprocessing\reductions.py", line 607, in reduce_storage
+    metadata = storage._share_filename_cpu_()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<work>\fedv2x-aid\.venv-gpu\Lib\site-packages\torch\storage.py", line 437, in wrapper
+    return fn(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<work>\fedv2x-aid\.venv-gpu\Lib\site-packages\torch\storage.py", line 516, in _share_filename_cpu_
+    return super()._share_filename_cpu_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Couldn't open shared file mapping: <torch_41888_1498247320_27>, error code: <1455>
+[K       2/10      3.19G      1.202      1.873      1.241        347        640: 2% ──────────── 38/1813 1.1it/s 31.0s<26:44[K       2/10      3.19G      1.199      1.867      1.239        183        640: 2% ──────────── 39/1813 1.6it/s 31.4s<19:02[K       2/10      3.19G      1.192      1.863      1.239        141        640: 2% ──────────── 40/1813 1.9it/s 31.7s<15:48[K       2/10      3.19G      1.184      1.853      1.236        157        640: 2% ──────────── 41/1813 2.0it/s 32.1s<14:28[K       2/10      3.19G      1.188      1.854      1.239        298        640: 2% ──────────── 42/1813 2.2it/s 32.6s<13:35[K       2/10      3.19G      1.181      1.848      1.237        134        640: 2% ──────────── 43/1813 2.3it/s 32.9s<12:52[K       2/10      3.19G      1.174      1.842      1.233        118        640: 2% ──────────── 44/1813 2.4it/s 33.3s<12:18[K       2/10      3.19G      1.169      1.841      1.234        136        640: 2% ──────────── 45/1813 2.4it/s 33.7s<12:13[K       2/10      3.19G      1.171      1.839      1.233        183        640: 2% ──────────── 46/1813 2.4it/s 34.2s<12:28[K       2/10      3.19G      1.174       1.84      1.235        238        640: 2% ──────────── 47/1813 2.3it/s 34.6s<12:42[K       2/10      3.19G      1.173      1.837      1.233        251        640: 2% ──────────── 48/1813 2.3it/s 35.1s<12:58[K       2/10      3.19G      1.168       1.83      1.231        175        640: 2% ──────────── 49/1813 2.2it/s 35.6s<13:30[K       2/10      3.19G      1.167      1.833      1.232        144        640: 2% ──────────── 50/1813 2.2it/s 36.1s<13:32[K       2/10      3.19G      1.169      1.832      1.232        253        640: 2% ──────────── 51/1813 2.2it/s 36.5s<13:14[K       2/10      3.19G      1.165      1.832      1.231        166        640: 2% ──────────── 52/1813 2.1it/s 37.0s<13:52[K       2/10      3.19G      1.164      1.832      1.231        152        640: 2% ──────────── 53/1813 2.0it/s 37.7s<14:58[K       2/10      3.19G      1.163      1.828       1.23        229        640: 2% ──────────── 54/1813 2.0it/s 38.1s<14:36[K       2/10      3.19G      1.159      1.827      1.229        114        640: 3% ──────────── 55/1813 1.9it/s 38.7s<15:02[K       2/10      3.19G      1.159      1.822       1.23        171        640: 3% ──────────── 56/1813 1.9it/s 39.2s<15:24[K       2/10      3.19G      1.159      1.827      1.229        244        640: 3% ──────────── 57/1813 1.9it/s 39.8s<15:32[K       2/10      3.19G       1.16       1.83       1.23        224        640: 3% ──────────── 58/1813 1.9it/s 40.3s<15:18[K       2/10      3.19G      1.166      1.836       1.23        366        640: 3% ──────────── 59/1813 1.8it/s 40.9s<15:54[K       2/10      3.19G      1.169      1.835      1.231        285        640: 3% ──────────── 60/1813 2.0it/s 41.3s<14:36[K       2/10      3.19G      1.171      1.836      1.231        331        640: 3% ──────────── 61/1813 1.8it/s 42.1s<16:13[K       2/10      3.19G      1.172      1.835      1.232        234        640: 3% ──────────── 62/1813 1.7it/s 42.7s<16:57[K       2/10      3.19G      1.173      1.834      1.232        182        640: 3% ──────────── 63/1813 1.6it/s 43.4s<17:42[K       2/10      3.19G      1.173      1.833      1.232        200        640: 3% ──────────── 64/1813 1.7it/s 44.0s<17:30[K       2/10      3.19G      1.175       1.83      1.233        281        640: 3% ──────────── 65/1813 1.8it/s 44.5s<16:38[K       2/10      3.19G      1.177      1.837      1.234        261        640: 3% ──────────── 66/1813 1.8it/s 45.0s<16:23[K       2/10      3.19G      1.176      1.833      1.233        197        640: 3% ──────────── 67/1813 1.8it/s 45.6s<16:28[K       2/10      3.19G      1.173      1.835      1.232        176        640: 3% ──────────── 68/1813 1.9it/s 46.1s<15:42[K       2/10      3.19G      1.177      1.837      1.232        320        640: 3% ──────────── 69/1813 1.8it/s 46.7s<16:25[K       2/10      3.19G      1.178      1.836      1.233        204        640: 3% ──────────── 70/1813 1.7it/s 47.3s<16:45[K       2/10      3.19G      1.174      1.831      1.232        180        640: 3% ──────────── 71/1813 1.7it/s 47.9s<16:53[K       2/10      3.19G      1.172      1.829      1.233        124        640: 3% ──────────── 72/1813 1.7it/s 48.5s<17:06[K       2/10      3.19G      1.173      1.828      1.232        291        640: 4% ──────────── 73/1813 1.6it/s 49.2s<17:57[K       2/10      3.19G      1.175      1.827      1.232        241        640: 4% ──────────── 74/1813 1.6it/s 49.8s<17:41[K       2/10      3.19G      1.178      1.826      1.232        377        640: 4% ──────────── 75/1813 1.5it/s 50.6s<18:58

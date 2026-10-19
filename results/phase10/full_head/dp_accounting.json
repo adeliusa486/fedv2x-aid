@@ -1,0 +1,18 @@
+[
+ {
+  "file": "fedv2x-dp_z0.5_s0.json",
+  "z": 0.5,
+  "max_participations": 50,
+  "delta": 1e-05,
+  "eps_rdp": 167.86,
+  "eps_closed_form": 167.86
+ },
+ {
+  "file": "fedv2x-dp_z1.0_s0.json",
+  "z": 1.0,
+  "max_participations": 50,
+  "delta": 1e-05,
+  "eps_rdp": 58.93,
+  "eps_closed_form": 58.93
+ }
+]

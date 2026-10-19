@@ -1,0 +1,14 @@
+# Pinned CPU-only dependencies for the computed studies (exact versions that produced results/published/).
+# Python 3.11. SUMO 1.27 must also be installed with `sumo` and `netgenerate` on PATH (mobility studies only).
+numpy==2.4.6
+scipy==1.17.1
+dp-accounting==0.6.0
+absl-py==2.5.1
+attrs==23.2.0
+dm-tree==0.1.10
+mpmath==1.4.1
+wrapt==2.5.1
+sumolib==1.27.0
+pytest==8.4.2
+pyyaml==6.0.3        # Phase 2 data tools (manifest, taxonomy, federation)
+pillow==12.3.0       # Phase 2 data tools

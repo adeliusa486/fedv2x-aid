@@ -1,0 +1,15 @@
+{
+ "subset_seed": 20261016,
+ "n_images": 1000,
+ "model": "<reference_detector.pt>",
+ "ultralytics_map50": 0.5682981814745796,
+ "n_predictions": 159296,
+ "ours_map50_iou": 0.5682290715735551,
+ "classes_iou": 144,
+ "max_abs_class_diff_iou": 0.010000000000000009,
+ "ours_map50_score": 0.5683682217198803,
+ "classes_score": 144,
+ "max_abs_class_diff_score": 0.010000000000000009,
+ "abs_diff_iou_rule": 6.910990102448888e-05,
+ "pass": true
+}

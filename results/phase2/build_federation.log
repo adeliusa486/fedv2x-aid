@@ -1,0 +1,49 @@
+{
+ "params": {
+  "seed": 20261017,
+  "vistas_clients": 22,
+  "rf_clients": 8,
+  "quota": 510,
+  "alpha": 0.5,
+  "safety_min": 2000,
+  "max_atom": 20,
+  "out": "<work>\\fedv2x-aid\\results\\phase2\\federation.json",
+  "split_sizes": {
+   "train": 300,
+   "val": 60,
+   "test": 150
+  },
+  "rf_client_sources": [
+   "rf_risk",
+   "rf_bump2",
+   "rf_obstacle",
+   "rf_openhole",
+   "rf_aid",
+   "rf_esera",
+   "rf_starvision"
+  ],
+  "groups": [
+   "vehicle",
+   "person",
+   "curb",
+   "crosswalk",
+   "stairs",
+   "pothole"
+  ]
+ },
+ "safety_instances": {
+  "vehicle": 8095,
+  "person": 3014,
+  "curb": 4109,
+  "crosswalk": 2000,
+  "stairs": 2000,
+  "pothole": 2025
+ },
+ "atoms": {
+  "total": 246524,
+  "multi_image": 6685,
+  "vistas_pool": 15746,
+  "rf_pool": 4010
+ }
+}
+server images 245479 safety images 3076

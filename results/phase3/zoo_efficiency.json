@@ -1,0 +1,62 @@
+{
+ "yolo11n": {
+  "params": 2671356,
+  "gmacs_640": 3.4586832,
+  "end2end_nms_free": false,
+  "gpu_fp16_ms": {
+   "median": 9.980800001358148,
+   "p95": 16.915409999637628
+  },
+  "gpu_nms_ms": {
+   "median": 1.9003499983227812,
+   "p95": 7.341304997316902
+  },
+  "gpu_energy_mJ_per_frame": 250.772,
+  "gpu_idle_W": 10.23096,
+  "gpu_energy_above_idle_mJ_per_frame": 111.97290565327378,
+  "frames": 500,
+  "cpu_onnxruntime": {
+   "cpu_threads": 4,
+   "fp32": {
+    "median_ms": 26.304450000679935,
+    "p95_ms": 27.5113150024481,
+    "file_MB": 10.931051
+   },
+   "int8": {
+    "median_ms": 25.067099999432685,
+    "p95_ms": 26.001679999899352,
+    "file_MB": 3.292717
+   }
+  }
+ },
+ "reference": {
+  "params": 9486616,
+  "gmacs_640": 10.995584,
+  "end2end_nms_free": false,
+  "gpu_fp16_ms": {
+   "median": 10.42549999874609,
+   "p95": 11.810890000197105
+  },
+  "gpu_nms_ms": {
+   "median": 2.3366000004898524,
+   "p95": 7.444344999566964
+  },
+  "gpu_energy_mJ_per_frame": 419.804,
+  "gpu_idle_W": 6.36308,
+  "gpu_energy_above_idle_mJ_per_frame": 331.0625735781485,
+  "frames": 500,
+  "cpu_onnxruntime": {
+   "cpu_threads": 4,
+   "fp32": {
+    "median_ms": 64.25155000033556,
+    "p95_ms": 66.59771000013279,
+    "file_MB": 38.164523
+   },
+   "int8": {
+    "median_ms": 45.33774999981688,
+    "p95_ms": 46.92590500053484,
+    "file_MB": 10.213249
+   }
+  }
+ }
+}

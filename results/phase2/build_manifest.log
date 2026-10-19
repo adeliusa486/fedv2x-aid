@@ -1,0 +1,36 @@
+263857 images listed in 2 s
+  20000 images, 79 s
+  40000 images, 159 s
+  60000 images, 257 s
+  80000 images, 393 s
+  100000 images, 430 s
+  120000 images, 442 s
+  140000 images, 456 s
+  160000 images, 468 s
+  180000 images, 479 s
+<work>\fedv2x-aid\.venv\Lib\site-packages\PIL\Image.py:3578: DecompressionBombWarning: Image size (95664000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  warnings.warn(
+  200000 images, 492 s
+  220000 images, 506 s
+  240000 images, 535 s
+  260000 images, 692 s
+{
+ "source_counts_equal": true,
+ "train_images": 235951,
+ "val_images": 27906,
+ "split_totals_ok": true,
+ "roboflow_projects": 20,
+ "class_counts_equal": true,
+ "images_violating_merged_identity": 0,
+ "pseudo_boxes": {
+  "train": 459054,
+  "val": 54277
+ },
+ "relabelled_boxes": 573,
+ "note": "class_counts.csv counts pseudo boxes as merged minus human per class, so the 573 MTSD boxes relabelled from traffic sign to stop sign appear there as +stop sign / -traffic sign",
+ "missing_human_label_files": 0,
+ "missing_merged_label_files": 0,
+ "unreadable_images": 0,
+ "rows_complete": true
+}
+PASS 263857 rows, 755 s, sha256 7f576577d1c0b886

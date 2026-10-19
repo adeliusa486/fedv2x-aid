@@ -1,0 +1,11 @@
+Overriding model.yaml nc=80 with nc=152
+{'epoch': 1, 'loss': 4.553230425342917, 'val_map50': 0.2364158097026416, 'val_classes': 115, 'seconds': 315.6}
+{'epoch': 2, 'loss': 3.8916384608795247, 'val_map50': 0.26565801700129693, 'val_classes': 115, 'seconds': 539.7}
+{'epoch': 3, 'loss': 3.803530511756738, 'val_map50': 0.27361525805666015, 'val_classes': 115, 'seconds': 913.9}
+{'epoch': 4, 'loss': 3.727942369878292, 'val_map50': 0.2919847220645424, 'val_classes': 115, 'seconds': 1344.9}
+{'epoch': 5, 'loss': 3.664832869078964, 'val_map50': 0.3050978686405687, 'val_classes': 115, 'seconds': 2284.5}
+{'epoch': 6, 'loss': 3.619947833319505, 'val_map50': 0.30466159127855014, 'val_classes': 115, 'seconds': 2926.9}
+{'epoch': 7, 'loss': 3.5685539239396653, 'val_map50': 0.3125457286641952, 'val_classes': 115, 'seconds': 4146.5}
+{'epoch': 8, 'loss': 3.544124372303486, 'val_map50': 0.3223932970794896, 'val_classes': 115, 'seconds': 4471.0}
+{'epoch': 9, 'loss': 3.493622694940617, 'val_map50': 0.3241793748706683, 'val_classes': 115, 'seconds': 4931.1}
+{'epoch': 10, 'loss': 3.5000796069701514, 'val_map50': 0.3178378081601648, 'val_classes': 115, 'seconds': 5221.8}

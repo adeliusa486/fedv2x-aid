@@ -1,0 +1,51 @@
+{
+ "clients": 30,
+ "n_min_test_instances": 20,
+ "images": {
+  "train": 8999,
+  "val": 1802,
+  "test": 4501
+ },
+ "pooled_test_instances": {
+  "vehicle": 23992,
+  "person": 5621,
+  "curb": 9820,
+  "crosswalk": 2553,
+  "stairs": 67,
+  "pothole": 2246
+ },
+ "pooled_train_instances": {
+  "vehicle": 47689,
+  "person": 10641,
+  "curb": 19749,
+  "crosswalk": 5143,
+  "stairs": 124,
+  "pothole": 4028
+ },
+ "clients_evaluated_per_group": {
+  "vehicle": 22,
+  "person": 22,
+  "curb": 22,
+  "crosswalk": 25,
+  "stairs": 1,
+  "pothole": 10
+ },
+ "clients_without_evaluated_group": [],
+ "min_test_instances_on_evaluated_groups": 20,
+ "js_divergence_mean": 0.2368,
+ "js_divergence_range": [
+  0.0022,
+  0.8637
+ ],
+ "effective_groups_mean": 2.543,
+ "safety_instances": {
+  "vehicle": 8095,
+  "person": 3014,
+  "curb": 4109,
+  "crosswalk": 2000,
+  "stairs": 2000,
+  "pothole": 2025
+ },
+ "safety_images": 3076,
+ "server_images": 245479
+}

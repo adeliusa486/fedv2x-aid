@@ -1,0 +1,193 @@
+{
+ "frames_with_signal": 6730,
+ "suppression": {
+  "vehicle": {
+   "instances": 45165,
+   "standard_background": 33203,
+   "scoped_protected": 29775,
+   "scoped_out_of_scope": 2023,
+   "scoped_background": 1405,
+   "teacher_box": 11962,
+   "scoped_background_share_of_unlabelled": 0.042315453422883474
+  },
+  "person": {
+   "instances": 9310,
+   "standard_background": 9265,
+   "scoped_out_of_scope": 6126,
+   "scoped_protected": 3059,
+   "teacher_box": 45,
+   "scoped_background": 80,
+   "scoped_background_share_of_unlabelled": 0.008634646519158122
+  },
+  "curb": {
+   "instances": 17865,
+   "standard_background": 17862,
+   "scoped_out_of_scope": 11687,
+   "scoped_protected": 3335,
+   "scoped_background": 2840,
+   "teacher_box": 3,
+   "scoped_background_share_of_unlabelled": 0.15899675288321577
+  },
+  "crosswalk": {
+   "instances": 4188,
+   "standard_background": 4188,
+   "scoped_out_of_scope": 4188,
+   "scoped_background_share_of_unlabelled": 0.0
+  },
+  "stairs": {
+   "instances": 101,
+   "standard_background": 86,
+   "scoped_protected": 62,
+   "scoped_background": 18,
+   "teacher_box": 15,
+   "scoped_out_of_scope": 6,
+   "scoped_background_share_of_unlabelled": 0.20930232558139536
+  },
+  "pothole": {
+   "instances": 1674,
+   "standard_background": 1630,
+   "scoped_background": 681,
+   "scoped_out_of_scope": 725,
+   "teacher_box": 44,
+   "scoped_protected": 224,
+   "scoped_background_share_of_unlabelled": 0.41779141104294476
+  },
+  "all": {
+   "instances": 78303,
+   "standard_background": 66234,
+   "scoped_protected": 36455,
+   "scoped_out_of_scope": 24755,
+   "scoped_background": 5024,
+   "teacher_box": 12069,
+   "scoped_background_share_of_unlabelled": 0.07585228130567383
+  }
+ },
+ "range": {
+  "events": 4795,
+  "invalid": 0,
+  "misses": 4435,
+  "promoted": 2944,
+  "promoted_precision": 0.13858695652173914,
+  "dropoff_touched": {
+   "curb": {
+    "touched": 4386,
+    "instances": 19744,
+    "share": 0.22214343598055106
+   },
+   "stairs": {
+    "touched": 84,
+    "instances": 124,
+    "share": 0.6774193548387096
+   },
+   "pothole": {
+    "touched": 357,
+    "instances": 3528,
+    "share": 0.10119047619047619
+   },
+   "open hole": {
+    "touched": 214,
+    "instances": 500,
+    "share": 0.428
+   }
+  },
+  "promoted_per_class": {
+   "car": {
+    "correct": 253,
+    "promoted": 886,
+    "precision": 0.28555304740406323
+   },
+   "curb": {
+    "correct": 3,
+    "promoted": 363,
+    "precision": 0.008264462809917356
+   },
+   "person": {
+    "correct": 45,
+    "promoted": 177,
+    "precision": 0.2542372881355932
+   },
+   "street light": {
+    "correct": 30,
+    "promoted": 172,
+    "precision": 0.1744186046511628
+   },
+   "pole": {
+    "correct": 4,
+    "promoted": 169,
+    "precision": 0.023668639053254437
+   },
+   "fence": {
+    "correct": 5,
+    "promoted": 108,
+    "precision": 0.046296296296296294
+   },
+   "open hole": {
+    "correct": 44,
+    "promoted": 64,
+    "precision": 0.6875
+   },
+   "stairs": {
+    "correct": 15,
+    "promoted": 51,
+    "precision": 0.29411764705882354
+   },
+   "bicycle": {
+    "correct": 6,
+    "promoted": 21,
+    "precision": 0.2857142857142857
+   },
+   "pothole": {
+    "correct": 0,
+    "promoted": 19,
+    "precision": 0.0
+   },
+   "trash can": {
+    "correct": 1,
+    "promoted": 14,
+    "precision": 0.07142857142857142
+   },
+   "utility box": {
+    "correct": 0,
+    "promoted": 13,
+    "precision": 0.0
+   },
+   "barrier": {
+    "correct": 1,
+    "promoted": 6,
+    "precision": 0.16666666666666666
+   },
+   "bench": {
+    "correct": 0,
+    "promoted": 4,
+    "precision": 0.0
+   },
+   "parking meter": {
+    "correct": 0,
+    "promoted": 3,
+    "precision": 0.0
+   },
+   "traffic cone": {
+    "correct": 0,
+    "promoted": 2,
+    "precision": 0.0
+   },
+   "utility pole": {
+    "correct": 0,
+    "promoted": 2,
+    "precision": 0.0
+   },
+   "fire hydrant": {
+    "correct": 1,
+    "promoted": 1,
+    "precision": 1.0
+   },
+   "cyclist": {
+    "correct": 0,
+    "promoted": 1,
+    "precision": 0.0
+   }
+  },
+  "frames": 8999,
+  "frames_with_signal": 6730
+ }
+}

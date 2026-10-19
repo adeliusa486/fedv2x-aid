@@ -1,0 +1,20 @@
+.venv/
+.venv-gpu/
+__pycache__/
+.pytest_cache/
+*.pyc
+# large or machine-specific scratch output
+_sumo_runs/
+results/reproduced/*/sumo_work/
+weights/
+*.pt
+
+# debugging runs and stray compiler logs
+results/dryrun/
+results/phase5/teacher_stats_dryrun_*.json
+/acceleras.log
+/*_sdk*.log
+/allocator.log
+
+# real-image experiments: caches, teacher labels, heads (FEDV2X_WORK)
+/work/
