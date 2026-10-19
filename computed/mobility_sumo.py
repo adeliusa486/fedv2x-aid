@@ -205,7 +205,7 @@ def federation(seg_pool, rsu_per_town, n_aids, loss, rate_bps, fixed, seed):
 
 
 def federation_modes(walker_segs, rsu_per_town, n_aids, mode, duty, fixed, seed, routes=3):
-    """Variant of federation() with explicit mobility modes (journal revision, reviewer concern on
+    """Variant of federation() with explicit mobility modes (added to test the
     segment independence and duty cycle). walker_segs[town] = list over walkers of their segments in
     time order. Aids stay in their home town.
 

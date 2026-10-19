@@ -216,7 +216,7 @@ src/teachers/                V2X and range teachers, KITTI labelling study
 src/edge/, src/metrics/      edge model costs and evaluation metrics
 src/privacy/                 DP accounting
 results/published/           archived outputs of the computed studies
-results/phase*/              outputs of the real-image experiments
+results/phase*/              outputs of the real-image experiments (phaseN = stage N of the study; the experiment ID, such as E1 or E7, is in the subfolder name)
 results/reproduced/          reproduction runs with comparison reports
 data/                        class list, dataset counts and range-sensor bench log used by the code (with checksums)
 preregistration/, docs/      pre-registration, claim ledger, number-check report, dataset manifest, figures

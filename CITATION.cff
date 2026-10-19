@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this artifact, please cite the FedV2X-Aid paper."
-title: "FedV2X-Aid reviewer artifact: computed studies, real-image experiments, reproduction runner and number checker"
+title: "FedV2X-Aid: code, results and reproduction scripts"
 authors:
   - family-names: "Ahmad"
     given-names: "Adeel"
@@ -10,7 +10,7 @@ authors:
     given-names: "Eraj"
   - family-names: "Hossain"
     given-names: "Gahangir"
-version: 1.0.0
+version: 1.0.2
 date-released: 2026-10-19
 repository-code: "https://github.com/adeliusa486/fedv2x-aid"
 license: MIT
