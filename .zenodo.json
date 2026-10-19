@@ -1,0 +1,13 @@
+{
+  "title": "FedV2X-Aid: code, results and reproduction scripts",
+  "upload_type": "software",
+  "description": "<p>Code and result files behind the paper <em>FedV2X-Aid: A V2X-Assisted Edge-IoT Framework for Label-Free Hazard Detection on Assistive Wearables</em> (submitted to Discover Internet of Things, 2026).</p><p>The archive contains the scripts and archived outputs of the 15 computed studies, the federated-learning implementation with all baselines, the V2X and range-sensor teacher emulation, the outputs of the real-image experiments (E1 main comparison, E7 ablations, privacy and poisoning studies), the pre-registration of experiment E1, a one-command reproduction runner, and a tool that recomputes every computed number in the paper from the result files. The README lists installation steps and the command for each result.</p><p>Not included: the model weights and the merged label files, which are available from the corresponding author on reasonable request, and the third-party image datasets, which are available from their providers under their own licenses.</p>",
+  "creators": [
+    {"name": "Ahmad, Adeel"},
+    {"name": "Ali, Arshad"},
+    {"name": "Khan, Eraj"},
+    {"name": "Hossain, Gahangir"}
+  ],
+  "license": "MIT",
+  "keywords": ["federated learning", "V2X", "assistive technology", "mobility aids", "edge AI", "Internet of Things", "reproducibility"]
+}
