@@ -243,19 +243,6 @@ These are the limitations stated in the paper, listed here so nobody reads more 
 | GPU training is about five times slower than expected | On Windows, GPU memory above 8 GB silently spills into system memory. Keep the stacked-head chunk at 10 aids or fewer. |
 | Non-maximum suppression is very slow | Import `torchvision` before Ultralytics so it uses the CUDA kernel. `src/fl/heads.py` already does this. |
 
-## Citation
-
-If you use this code, please cite the paper. GitHub shows a citation from [`CITATION.cff`](CITATION.cff).
-
-```bibtex
-@article{ahmad2026fedv2xaid,
-  title   = {{FedV2X-Aid}: A {V2X}-Assisted Edge-{IoT} Framework for Label-Free Hazard Detection on Assistive Wearables},
-  author  = {Ahmad, Adeel and Ali, Arshad and Khan, Eraj and Hossain, Gahangir},
-  journal = {Discover Internet of Things},
-  note    = {Submitted},
-  year    = {2026}
-}
-```
 
 ## License
 
